@@ -1,0 +1,77 @@
+{
+    "env": {
+        "shared-node-browser": true,
+        "commonjs": true,
+        "amd": true,
+        "es2020": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": "warn",
+        "semi": "error",
+        "no-undef": "error",
+        "quotes": ["error", "double"],
+        "no-await-in-loop": "error",
+        "no-extra-parens": "error",
+        "no-unreachable-loop": "error",
+        "no-useless-backreference": "error",
+
+        // Eslint best practices
+        "accessor-pairs": "error",
+        "block-scoped-var": "error",
+        "class-methods-use-this": "error",
+        "default-case": "error",
+        "eqeqeq": "error",
+        "no-alert": "error",
+        "no-caller": "error",
+        "no-constructor-return": "error",
+        "no-empty-function": "error",
+        "no-else-return": "error",
+        "no-div-regex": "error",
+        "no-eq-null": "error",
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "no-invalid-this": "error",
+        "no-lone-blocks": "error",
+        "no-magic-numbers": "off",
+        "no-multi-spaces": "error",
+        "no-multi-str": "error",
+        "no-new": "error",
+        "no-new-func": "error",
+        "no-unused-expressions": "error",
+        "no-param-reassign": "off",
+        "no-useless-catch": "error",
+        "prefer-promise-reject-errors": "error",
+        "radix": "error",
+        "require-await": "error",
+        "vars-on-top": "error",
+        "strict": "error",
+        "no-use-before-define": "error",
+        "camelcase": "error",
+        "max-lines-per-function": "error",
+        "max-nested-callbacks": "error",
+        "max-params": "error",
+        "max-statements-per-line": "error",
+        "multiline-ternary": "error",
+        "new-cap": "error",
+        "new-parens": "error",
+        "newline-per-chained-call": "error",
+        "no-multi-assign": "error",
+        "no-tabs": "error",
+        "indent": "off",
+        "no-underscore-dangle": "error",
+        "prefer-rest-params": "error",
+        "eol-last": "off",
+        "prefer-spread": "error",
+        "consistent-return": 2
+    },
+
+    "noInlineConfig": true,
+    "reportUnusedDisableDirectives": true
+}
