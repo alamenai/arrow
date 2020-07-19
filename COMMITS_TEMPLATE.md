@@ -73,7 +73,7 @@ Description
 :tada:
 </td>
 <td>
-<code>tada</code>
+<code>:tada:</code>
 </td>
 <td>
 Create
@@ -88,7 +88,7 @@ When you create and initialize new file
 :beetle:
 </td>
 <td>
-<code>beetle</code>
+<code>:beetle:</code>
 </td>
 <td>
 Fix
@@ -102,7 +102,7 @@ When you fix a bug or a grammar mistake
 :cyclone:
 </td>
 <td>
-<code>cyclone</code>
+<code>:cyclone:</code>
 </td>
 <td>
 Rename
@@ -116,7 +116,7 @@ When you rename a function or variable
 :wrench:
 </td>
 <td>
-<code>wrench</code>
+<code>:wrench:</code>
 </td>
 <td>
 Refactor
@@ -129,7 +129,7 @@ When you re-implement a function, module or a unit test
 :wastebasket:
 </td>
 <td>
-<code>wastebasket</code>
+<code>:wastebasket:</code>
 </td>
 <td>
 Remove
