@@ -1,0 +1,38 @@
+{
+    "name": "arrow",
+    "version": "1.0.0",
+    "description": "A tiny javascript library for solving complex problems that are related to arrays",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint ./**",
+        "lint:fix": "eslint ./** --fix",
+        "lint:src": "eslint ./src",
+        "lint:src:fix": "eslint ./src --fix",
+        "lint:fix-cache": "eslint ./** --fix --cache",
+        "test": "jest --config=jest.config.js --detectOpenHandles"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MenaiAla/arrow.git"
+    },
+    "keywords": [
+        "javascript",
+        "arrays", "algorithm"
+    ],
+    "author": "Menai Ala Eddine",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/MenaiAla/arrow/issues"
+    },
+    "homepage": "https://github.com/MenaiAla/arrow#readme",
+    "devDependencies": {
+        "@babel/core": "^7.10.5",
+        "@babel/preset-env": "^7.10.4",
+        "babel-jest": "^26.1.0",
+        "eslint": "^7.4.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "jest": "^26.1.0"
+    },
+    "dependencies": {}
+}
