@@ -1,0 +1,14 @@
+**/bin
+**/examples
+**/node_modules
+**/.gitignore
+**/.babelrc
+**/.eslintcache
+**/.eslintignore
+**/.eslintrc.json
+**/.npmignore
+**/CODE_CONVENTION
+**/CONTRIBUTION
+**/package-lock.json
+**/package.json
+**/README
