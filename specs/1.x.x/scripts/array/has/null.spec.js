@@ -1,5 +1,57 @@
 import ArrayNull from "../../../../../src/1.x.x/scripts/array/has/null";
 
+function __throwError(func) {
+    if (func.length === 1) {
+
+        function passNumber() {
+            func(0);
+        }
+
+        function passString() {
+            func("item");
+        }
+
+        function passEmptyArray() {
+            func([]);
+        }
+
+        function passUndefinedOrNull() {
+            func(undefined || null);
+        }
+
+        expect(passNumber).toThrowError("The parameter should be an array");
+        expect(passString).toThrowError("The parameter should be an array");
+        expect(passEmptyArray).toThrowError("The array is empty");
+        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+
+    }
+
+    if (func.length === 2) {
+
+        function passNumber() {
+            func(0, 1);
+        }
+
+        function passString() {
+            func("item", 1);
+        }
+
+        function passEmptyArray() {
+            func([], 1);
+        }
+
+        function passUndefinedOrNull() {
+            func(undefined || null, 1);
+        }
+
+        expect(passNumber).toThrowError("The parameter should be an array");
+        expect(passString).toThrowError("The parameter should be an array");
+        expect(passEmptyArray).toThrowError("The array is empty");
+        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+
+    }
+}
+
 describe("Array has any null value", () => {
     it("should return true if the array has any null value", () => {
         expect(ArrayNull.hasAnyNull([1, 1])).toBeTruthy();
@@ -11,27 +63,8 @@ describe("Array has any null value", () => {
     it("should return false if the array has only null values", () => {
         expect(ArrayNull.hasAnyNull([null, null])).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasAnyNull(0);
-        }
-        function passString() {
-            ArrayNull.hasAnyNull("item");
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-    });
-    it("should throw error if the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasAnyNull(undefined || null);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-    });
-    it("should throw error if the array is empty", () => {
-        function pasEmptyArray() {
-            ArrayNull.hasAnyNull([]);
-        }
-        expect(pasEmptyArray).toThrowError("The array is empty");
+    it("should throw an error", () => {
+        __throwError(ArrayNull.hasAnyNull);
     });
 });
 
@@ -49,27 +82,9 @@ describe("Array has at least a null value", () => {
     it("should return false if the array has only undefined values", () => {
         expect(ArrayNull.hasAtLeastNull([undefined, undefined])).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasAtLeastNull(0);
-        }
-        function passString() {
-            ArrayNull.hasAtLeastNull("item");
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-    });
-    it("should throw error if the array is empty", () => {
-        function pasEmptyArray() {
-            ArrayNull.hasAtLeastNull([]);
-        }
-        expect(pasEmptyArray).toThrowError("The array is empty");
-    });
-    it("should throw error when the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasAtLeastNull(undefined || null);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+
+    it("should throw an error", () => {
+        __throwError(ArrayNull.hasAtLeastNull);
     });
 });
 
@@ -88,27 +103,8 @@ describe("Array has only one null value", () => {
     it("should return false if the array has not null value", () => {
         expect(ArrayNull.hasOnceNull(["item", "item-2"])).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasOnceNull(0);
-        }
-        function passString() {
-            ArrayNull.hasOnceNull("item");
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-    });
-    it("should throw error if the array is empty", () => {
-        function pasEmptyArray() {
-            ArrayNull.hasOnceNull([]);
-        }
-        expect(pasEmptyArray).toThrowError("The array is empty");
-    });
-    it("should throw error if the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasOnceNull(undefined || null);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+    it("should throw error", () => {
+        __throwError(ArrayNull.hasOnceNull);
     });
 });
 
@@ -124,28 +120,11 @@ describe("Array has only null values", () => {
     it("should return false if the array has not null value", () => {
         expect(ArrayNull.hasOnlyNull(["item", "item-2"])).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasOnlyNull(0);
-        }
-        function passString() {
-            ArrayNull.hasOnlyNull("item");
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
+    it("should throw error", () => {
+        __throwError(ArrayNull.hasOnlyNull)
     });
-    it("should throw error if the array is empty", () => {
-        function pasEmptyArray() {
-            ArrayNull.hasOnlyNull([]);
-        }
-        expect(pasEmptyArray).toThrowError("The array is empty");
-    });
-    it("should throw error if the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasOnlyNull(undefined || null);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-    });
+
+
 });
 
 describe("Array has pair null values", () => {
@@ -161,27 +140,8 @@ describe("Array has pair null values", () => {
     it("should return false if the array has not null value", () => {
         expect(ArrayNull.hasPairNull(["item", "item-2"])).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasPairNull(0);
-        }
-        function passString() {
-            ArrayNull.hasPairNull("item");
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-    });
-    it("should throw error if the array is empty", () => {
-        function pasEmptyArray() {
-            ArrayNull.hasPairNull([]);
-        }
-        expect(pasEmptyArray).toThrowError("The array is empty");
-    });
-    it("should throw error if the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasPairNull(undefined || null);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+    it("should throw error", () => {
+        __throwError(ArrayNull.hasPairNull);
     });
 });
 
@@ -207,35 +167,19 @@ describe("Array has exact null values", () => {
         expect(ArrayNull.hasExactNull(["item", "item-2"], 2)).toBeFalsy();
     });
     it("should throw error if the parameter is not an array", () => {
-        function passNumber() {
-            ArrayNull.hasExactNull(0, numberCount);
-        }
-        function passString() {
-            ArrayNull.hasExactNull("item", numberCount);
-        }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
+        __throwError(ArrayNull.hasExactNull);
     });
-    it("should throw error if the array is empty", () => {
-        function passEmptyArray() {
-            ArrayNull.hasExactNull([], numberCount);
-        }
-        expect(passEmptyArray).toThrowError("The array is empty");
-    });
-    it("should throw error if the parameter is undefined or null", () => {
-        function passUndefinedOrNull() {
-            ArrayNull.hasExactNull(undefined || null, numberCount);
-        }
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-    });
+
     it("should throw error if the second parameter ( numberCount ) is not a number", () => {
         function passNull() {
             numberCount = null;
             ArrayNull.hasExactNull([1, null], null);
         }
+
         function passUndefined() {
             ArrayNull.hasExactNull([1, null], undefined);
         }
+
         function passString() {
             ArrayNull.hasExactNull([1, null], "1");
         }
