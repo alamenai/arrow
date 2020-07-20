@@ -1,55 +1,28 @@
 import ArrayNull from "../../../../../src/1.x.x/scripts/array/has/null";
 
 function __throwError(func) {
-    if (func.length === 1) {
 
-        function passNumber() {
-            func(0);
-        }
-
-        function passString() {
-            func("item");
-        }
-
-        function passEmptyArray() {
-            func([]);
-        }
-
-        function passUndefinedOrNull() {
-            func(undefined || null);
-        }
-
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-
+    function passNumber() {
+        func.length === 1 ? func(0) : func(0, 1)
     }
 
-    if (func.length === 2) {
-
-        function passNumber() {
-            func(0, 1);
-        }
-
-        function passString() {
-            func("item", 1);
-        }
-
-        function passEmptyArray() {
-            func([], 1);
-        }
-
-        function passUndefinedOrNull() {
-            func(undefined || null, 1);
-        }
-
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-
+    function passString() {
+        func.length === 1 ? func("item") : func("item", 1);
     }
+
+    function passEmptyArray() {
+        func.length === 1 ? func([]) : func([], 1);
+    }
+
+    function passUndefinedOrNull() {
+        func.length === 1 ? func(undefined || null) : func(undefined || null, 1);
+    }
+
+    expect(passNumber).toThrowError("The parameter should be an array");
+    expect(passString).toThrowError("The parameter should be an array");
+    expect(passEmptyArray).toThrowError("The array is empty");
+    expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
+
 }
 
 describe("Array has any null value", () => {
