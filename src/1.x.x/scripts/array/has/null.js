@@ -1,4 +1,6 @@
-import { checkArray } from "../../../helpers/check";
+import {
+    checkArray
+} from "../../../helpers/check";
 
 function hasAnyNull(array) {
     return checkArray(array) && !array.includes(null);
@@ -36,5 +38,10 @@ function hasExactNull(array, nullCount) {
 }
 
 export default {
-    hasAnyNull, hasAtLeastNull, hasOnceNull, hasOnlyNull, hasPairNull, hasExactNull,
+    hasAnyNull,
+    hasAtLeastNull,
+    hasOnceNull,
+    hasOnlyNull,
+    hasPairNull,
+    hasExactNull,
 };
