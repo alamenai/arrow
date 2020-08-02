@@ -37,7 +37,7 @@ function hasExactBoolean(array, nullCount) {
     }, 0) === nullCount);
 }
 
-export default {
+export {
     hasAnyBoolean,
     hasAtLeastBoolean,
     hasOnceBoolean,

@@ -4,7 +4,7 @@ import {
     hasExactNull,
     hasOnceNull,
     hasOnlyNull,
-    hasPairNull
+    hasPairNull,
 } from "../../../../../src/1.x.x/scripts/array/has/null";
 
 function __throwError(func) {
@@ -121,7 +121,6 @@ describe("Array has pair null elements", () => {
 });
 
 describe("Array has exact null elements", () => {
-
     it("should return true if the array has two number elements", () => {
         expect(hasExactNull([null, null], 2)).toBeTruthy();
     });
