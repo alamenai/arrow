@@ -1,4 +1,6 @@
-import ArrayEqual from "../../../../../src/1.x.x/scripts/array/has/equal";
+import {
+    equalAll
+} from "../../../../../src/1.x.x/scripts/array/has/equal";
 
 function __throwError(func) {
     function passNumber() {
@@ -25,21 +27,21 @@ function __throwError(func) {
 
 describe("Array has equal elements", () => {
     it("should return true if the array has equal boolean value", () => {
-        expect(ArrayEqual.equalAll([true, true])).toBeTruthy();
+        expect(equalAll([true, true])).toBeTruthy();
     });
     it("should return true if the array has equal string values", () => {
-        expect(ArrayEqual.equalAll(["item", "item"])).toBeTruthy();
+        expect(equalAll(["item", "item"])).toBeTruthy();
     });
     it("should return false if the array has equal number values", () => {
-        expect(ArrayEqual.equalAll([1, 1, 1])).toBeTruthy();
+        expect(equalAll([1, 1, 1])).toBeTruthy();
     });
     it("should return false if the array has equal null values", () => {
-        expect(ArrayEqual.equalAll([null, null, null])).toBeTruthy();
+        expect(equalAll([null, null, null])).toBeTruthy();
     });
     it("should return false if the array has equal undefined values", () => {
-        expect(ArrayEqual.equalAll([undefined, undefined, undefined])).toBeTruthy();
+        expect(equalAll([undefined, undefined, undefined])).toBeTruthy();
     });
     it("should throw an error", () => {
-        __throwError(ArrayEqual.equalAll);
+        __throwError(equalAll);
     });
 });
