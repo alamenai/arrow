@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596383061229" clover="3.2.0">
-  <project timestamp="1596383061229" name="All files">
-    <metrics statements="75" coveredstatements="75" conditionals="122" coveredconditionals="118" methods="60" coveredmethods="60" elements="257" coveredelements="253" complexity="0" loc="75" ncloc="75" packages="2" files="7" classes="7"/>
+<coverage generated="1596385219740" clover="3.2.0">
+  <project timestamp="1596385219740" name="All files">
+    <metrics statements="89" coveredstatements="89" conditionals="144" coveredconditionals="139" methods="72" coveredmethods="72" elements="305" coveredelements="300" complexity="0" loc="89" ncloc="89" packages="2" files="8" classes="8"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="280" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="249" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="187" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="156" type="stmt"/>
+        <line num="2" count="333" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="296" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="222" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="185" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
-      <metrics statements="71" coveredstatements="71" conditionals="114" coveredconditionals="110" methods="59" coveredmethods="59"/>
+      <metrics statements="85" coveredstatements="85" conditionals="136" coveredconditionals="131" methods="71" coveredmethods="71"/>
       <file name="array.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\array.js">
         <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="21" methods="12" coveredmethods="12"/>
         <line num="6" count="9" type="cond" truecount="2" falsecount="0"/>
@@ -51,6 +51,23 @@
       <file name="equal.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\equal.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="9" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="infinity.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\infinity.js">
+        <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="21" methods="12" coveredmethods="12"/>
+        <line num="6" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="22" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="33" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="15" type="stmt"/>
       </file>
       <file name="nan.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\nan.js">
         <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="21" methods="12" coveredmethods="12"/>
