@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596371657341" clover="3.2.0">
-  <project timestamp="1596371657341" name="All files">
+<coverage generated="1596371885552" clover="3.2.0">
+  <project timestamp="1596371885553" name="All files">
     <metrics statements="47" coveredstatements="47" conditionals="78" coveredconditionals="76" methods="34" coveredmethods="34" elements="159" coveredelements="157" complexity="0" loc="47" ncloc="47" packages="2" files="5" classes="5"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="221" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="196" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="146" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="121" type="stmt"/>
+        <line num="2" count="225" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="200" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="150" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="125" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
@@ -33,7 +33,7 @@
       </file>
       <file name="equal.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\equal.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="6" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="9" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="null.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\null.js">
         <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="21" methods="10" coveredmethods="10"/>
