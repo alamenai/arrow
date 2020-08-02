@@ -3,11 +3,11 @@ import {
 } from "../../../helpers/check";
 
 function hasAnyNull(array) {
-    return checkArray(array) && !array.includes(null);
+    return checkArray(array) && !array.every(element => element === null);
 }
 
 function hasAtLeastNull(array) {
-    return checkArray(array) && array.includes(null);
+    return checkArray(array) && array.some(element => element === null);
 }
 
 function hasOnceNull(array) {
