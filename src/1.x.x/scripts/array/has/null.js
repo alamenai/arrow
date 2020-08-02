@@ -11,28 +11,28 @@ function hasAtLeastNull(array) {
 }
 
 function hasOnceNull(array) {
-    return checkArray(array) && (array.reduce((acc, value) => {
+    return checkArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
-        if (value === null) acc += 1;
+        if (element === null) acc += 1;
         return acc;
     }, 0) === 1);
 }
 
 function hasOnlyNull(array) {
-    return checkArray(array) && array.every((value) => value === null);
+    return checkArray(array) && array.every((element) => value === null);
 }
 
 function hasPairNull(array) {
-    return checkArray(array) && (array.reduce((acc, value) => {
-        if (value === null) acc += 1;
+    return checkArray(array) && (array.reduce((acc, element) => {
+        if (element === null) acc += 1;
         return acc;
     }, 0) === 2);
 }
 
 function hasExactNull(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
-    return checkArray(array) && (array.reduce((acc, value) => {
-        if (value === null) acc += 1;
+    return checkArray(array) && (array.reduce((acc, element) => {
+        if (element === null) acc += 1;
         return acc;
     }, 0) === nullCount);
 }
