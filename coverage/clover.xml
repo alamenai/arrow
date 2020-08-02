@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596379312334" clover="3.2.0">
-  <project timestamp="1596379312334" name="All files">
+<coverage generated="1596379533976" clover="3.2.0">
+  <project timestamp="1596379533977" name="All files">
     <metrics statements="61" coveredstatements="61" conditionals="100" coveredconditionals="97" methods="46" coveredmethods="46" elements="207" coveredelements="204" complexity="0" loc="61" ncloc="61" packages="2" files="6" classes="6"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="226" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="201" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="151" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="222" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="150" type="cond" truecount="2" falsecount="0"/>
         <line num="5" count="126" type="stmt"/>
       </file>
     </package>
@@ -81,8 +81,8 @@
         <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="27" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="28" count="8" type="stmt"/>
-        <line num="33" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="35" count="15" type="cond" truecount="2" falsecount="0"/>
         <line num="36" count="15" type="stmt"/>
       </file>

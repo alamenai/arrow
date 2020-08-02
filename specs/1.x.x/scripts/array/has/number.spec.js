@@ -20,6 +20,7 @@ describe("Array has any number value", () => {
         function passNumber() {
             ArrayNumber.hasAnyNumber(0);
         }
+
         function passString() {
             ArrayNumber.hasAnyNumber("item");
         }
@@ -58,6 +59,7 @@ describe("Array has at least a null value", () => {
         function passNumber() {
             ArrayNumber.hasAtLeastNumber(0);
         }
+
         function passString() {
             ArrayNumber.hasAtLeastNumber("item");
         }
@@ -97,6 +99,7 @@ describe("Array has only one number value", () => {
         function passNumber() {
             ArrayNumber.hasOnceNumber(0);
         }
+
         function passString() {
             ArrayNumber.hasOnceNumber("item");
         }
@@ -132,6 +135,7 @@ describe("Array has only number values", () => {
         function passNumber() {
             ArrayNumber.hasOnlyNumber(0);
         }
+
         function passString() {
             ArrayNumber.hasOnlyNumber("item");
         }
@@ -169,6 +173,7 @@ describe("Array has pair number values", () => {
         function passNumber() {
             ArrayNumber.hasPairNumber(0);
         }
+
         function passString() {
             ArrayNumber.hasPairNumber("item");
         }
@@ -214,6 +219,7 @@ describe("Array has exact number values", () => {
         function passNumber() {
             ArrayNumber.hasExactNumber(0, numberCount);
         }
+
         function passString() {
             ArrayNumber.hasExactNumber("item", numberCount);
         }
@@ -237,9 +243,11 @@ describe("Array has exact number values", () => {
             numberCount = null;
             ArrayNumber.hasExactNumber([1, 2], null);
         }
+
         function passUndefined() {
             ArrayNumber.hasExactNumber([1, 2], undefined);
         }
+
         function passString() {
             ArrayNumber.hasExactNumber([1, 2], "1");
         }
