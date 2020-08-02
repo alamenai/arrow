@@ -12,9 +12,8 @@ export function abs(array, from, to) {
     }
 }
 
-// export function absAll(array = [], items) {
-//     // Concat the value with all items
-//     // Suppose the value is 'deno'
-//     // [1, 2, 3] will be [1deno, 2deno, 3deno]
-//     // Warning: If the value is a number, make sure the operation is concatenation not an addition
-// }
+export function absAll(array) {
+    if (checkArray(array)) {
+        return array.map(element => (typeof element === "number" && Math.abs(element)) || element)
+    }
+}
