@@ -1,9 +1,8 @@
 import ArrayBoolean from "../../../../../src/1.x.x/scripts/array/has/boolean";
 
 function __throwError(func) {
-
     function passNumber() {
-        func.length === 1 ? func(0) : func(0, 1)
+        func.length === 1 ? func(0) : func(0, 1);
     }
 
     function passString() {
@@ -22,7 +21,6 @@ function __throwError(func) {
     expect(passString).toThrowError("The parameter should be an array");
     expect(passEmptyArray).toThrowError("The array is empty");
     expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-
 }
 
 describe("Array has any boolean value", () => {
@@ -94,7 +92,7 @@ describe("Array has only boolean values", () => {
         expect(ArrayBoolean.hasOnlyBoolean(["item", "item-2"])).toBeFalsy();
     });
     it("should throw error", () => {
-        __throwError(ArrayBoolean.hasOnlyBoolean)
+        __throwError(ArrayBoolean.hasOnlyBoolean);
     });
 });
 

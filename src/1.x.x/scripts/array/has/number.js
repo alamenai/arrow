@@ -1,5 +1,5 @@
 import {
-    checkArray
+    checkArray,
 } from "../../../helpers/check";
 
 function hasAnyNumber(array) {

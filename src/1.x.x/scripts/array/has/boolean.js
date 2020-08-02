@@ -1,5 +1,5 @@
 import {
-    checkArray
+    checkArray,
 } from "../../../helpers/check";
 
 function hasAnyBoolean(array) {
@@ -13,18 +13,18 @@ function hasAtLeastBoolean(array) {
 function hasOnceBoolean(array) {
     return checkArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
-        if (typeof element === 'boolean') acc += 1;
+        if (typeof element === "boolean") acc += 1;
         return acc;
     }, 0) === 1);
 }
 
 function hasOnlyBoolean(array) {
-    return checkArray(array) && array.every((element) => typeof element === 'boolean');
+    return checkArray(array) && array.every((element) => typeof element === "boolean");
 }
 
 function hasPairBoolean(array) {
     return checkArray(array) && (array.reduce((acc, element) => {
-        if (typeof element === 'boolean') acc += 1;
+        if (typeof element === "boolean") acc += 1;
         return acc;
     }, 0) === 2);
 }
@@ -32,7 +32,7 @@ function hasPairBoolean(array) {
 function hasExactBoolean(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return checkArray(array) && (array.reduce((acc, element) => {
-        if (typeof element === 'boolean') acc += 1;
+        if (typeof element === "boolean") acc += 1;
         return acc;
     }, 0) === nullCount);
 }

@@ -1,13 +1,13 @@
 import {
-    checkArray
+    checkArray,
 } from "../../../helpers/check";
 
 function hasAnyArray(array) {
-    return checkArray(array) && !array.every(element => Array.isArray(element));
+    return checkArray(array) && !array.every((element) => Array.isArray(element));
 }
 
 function hasAtLeastArray(array) {
-    return checkArray(array) && array.some(element => Array.isArray(element));
+    return checkArray(array) && array.some((element) => Array.isArray(element));
 }
 
 function hasOnceArray(array) {
@@ -37,7 +37,7 @@ function hasExactArray(array, nullCount) {
     }, 0) === nullCount);
 }
 
-export default {
+export {
     hasAnyArray,
     hasAtLeastArray,
     hasOnceArray,

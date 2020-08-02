@@ -1,9 +1,8 @@
 import ArrayEqual from "../../../../../src/1.x.x/scripts/array/has/equal";
 
 function __throwError(func) {
-
     function passNumber() {
-        func.length === 1 ? func(0) : func(0, 1)
+        func.length === 1 ? func(0) : func(0, 1);
     }
 
     function passString() {
@@ -22,7 +21,6 @@ function __throwError(func) {
     expect(passString).toThrowError("The parameter should be an array");
     expect(passEmptyArray).toThrowError("The array is empty");
     expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-
 }
 
 describe("Array has equal elements", () => {
@@ -30,7 +28,7 @@ describe("Array has equal elements", () => {
         expect(ArrayEqual.equalAll([true, true])).toBeTruthy();
     });
     it("should return true if the array has equal string values", () => {
-        expect(ArrayEqual.equalAll(['item', 'item'])).toBeTruthy();
+        expect(ArrayEqual.equalAll(["item", "item"])).toBeTruthy();
     });
     it("should return false if the array has equal number values", () => {
         expect(ArrayEqual.equalAll([1, 1, 1])).toBeTruthy();

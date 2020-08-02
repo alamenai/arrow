@@ -1,5 +1,5 @@
 import {
-    checkArray
+    checkArray,
 } from "../../../helpers/check";
 
 function hasAnyNull(array) {
@@ -37,7 +37,7 @@ function hasExactNull(array, nullCount) {
     }, 0) === nullCount);
 }
 
-export default {
+export {
     hasAnyNull,
     hasAtLeastNull,
     hasOnceNull,
