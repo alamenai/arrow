@@ -4,7 +4,11 @@ import {
 
 export function abs(array, from, to) {
     if (checkArray(array)) {
-        return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && Math.abs(element)) || element)
+        if (to < array.length) {
+            return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && Math.abs(element)) || element)
+        } else {
+            throw new Error("The last index of the array is less then 'to' parameter")
+        }
     }
 }
 
