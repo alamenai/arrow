@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596385219740" clover="3.2.0">
-  <project timestamp="1596385219740" name="All files">
-    <metrics statements="89" coveredstatements="89" conditionals="144" coveredconditionals="139" methods="72" coveredmethods="72" elements="305" coveredelements="300" complexity="0" loc="89" ncloc="89" packages="2" files="8" classes="8"/>
+<coverage generated="1596397250517" clover="3.2.0">
+  <project timestamp="1596397250518" name="All files">
+    <metrics statements="104" coveredstatements="104" conditionals="168" coveredconditionals="162" methods="85" coveredmethods="85" elements="357" coveredelements="351" complexity="0" loc="104" ncloc="104" packages="2" files="9" classes="9"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="333" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="296" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="222" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="185" type="stmt"/>
+        <line num="2" count="390" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="347" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="261" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="218" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
-      <metrics statements="85" coveredstatements="85" conditionals="136" coveredconditionals="131" methods="71" coveredmethods="71"/>
+      <metrics statements="100" coveredstatements="100" conditionals="160" coveredconditionals="154" methods="84" coveredmethods="84"/>
       <file name="array.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\array.js">
         <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="21" methods="12" coveredmethods="12"/>
         <line num="6" count="9" type="cond" truecount="2" falsecount="0"/>
@@ -119,6 +119,24 @@
         <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="35" count="15" type="cond" truecount="2" falsecount="0"/>
         <line num="36" count="15" type="stmt"/>
+      </file>
+      <file name="object.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\has\object.js">
+        <metrics statements="15" coveredstatements="15" conditionals="24" coveredconditionals="23" methods="13" coveredmethods="13"/>
+        <line num="6" count="57" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="13" type="stmt"/>
+        <line num="26" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="37" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="12" type="stmt"/>
       </file>
     </package>
   </project>
