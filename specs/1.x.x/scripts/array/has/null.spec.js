@@ -136,7 +136,7 @@ describe("Array has exact null values", () => {
     it("should return false if the array has two null values", () => {
         expect(ArrayNull.hasExactNull([null, null, 1], 3)).toBeFalsy();
     });
-    it("should return false if the array has not number value", () => {
+    it("should return false if the array has not null value", () => {
         expect(ArrayNull.hasExactNull(["item", "item-2"], 2)).toBeFalsy();
     });
     it("should throw error if the parameter is not an array", () => {
