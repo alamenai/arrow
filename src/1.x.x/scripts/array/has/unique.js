@@ -3,5 +3,5 @@ import {
 } from "../../../helpers/check";
 
 export function uniqueAll(array) {
-    checkArray(array) && (array.length === 1) || (array.length === new Set(array).length)
+    return checkArray(array) && (new Set(array).size === array.length)
 }
