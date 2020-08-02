@@ -11,9 +11,9 @@ function hasAtLeastArray(array) {
 }
 
 function hasOnceArray(array) {
-    return checkArray(array) && (array.reduce((acc, value) => {
+    return checkArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
-        if (Array.isArray(value)) acc += 1;
+        if (Array.isArray(element)) acc += 1;
         return acc;
     }, 0) === 1);
 }
