@@ -4,7 +4,7 @@ import {
 
 export function abs(array, from, to) {
     if (checkArray(array)) {
-        return array.map(element => (array.indexOf(element) >= from && array.indexOf(element) < to + 1) && Math.abs(element))
+        return array.map(element => (array.indexOf(element) >= from && array.indexOf(element) < to + 1) ? Math.abs(element) : element);
     }
 }
 
