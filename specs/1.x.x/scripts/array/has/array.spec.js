@@ -66,7 +66,7 @@ describe("Array has at least an element with type Array", () => {
         expect(hasAtLeastArray([1, 1])).toBeFalsy();
         expect(hasAtLeastArray([1, "item"])).toBeFalsy();
     });
-    it("should return false if the array has only undefined values", () => {
+    it("should return false if the array has only undefined elements", () => {
         expect(hasAtLeastArray([undefined, undefined])).toBeFalsy();
     });
     it("should throw an error", () => {
@@ -116,7 +116,7 @@ describe("Array has only elements with type Array", () => {
             [undefined],
         ])).toBeTruthy();
     });
-    it("should return false if the array has only undefined values", () => {
+    it("should return false if the array has only undefined elements", () => {
         expect(hasOnlyArray([undefined, undefined])).toBeFalsy();
     });
     it("should return false if the array has not an element with type Array", () => {
