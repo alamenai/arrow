@@ -19,7 +19,7 @@ function hasOnceNull(array) {
 }
 
 function hasOnlyNull(array) {
-    return checkArray(array) && array.every((element) => value === null);
+    return checkArray(array) && array.every((element) => element === null);
 }
 
 function hasPairNull(array) {

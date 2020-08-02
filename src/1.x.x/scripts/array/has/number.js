@@ -3,11 +3,11 @@ import {
 } from "../../../helpers/check";
 
 function hasAnyNumber(array) {
-    return checkArray(array) && array.every((element) => typeof value !== "number");
+    return checkArray(array) && array.every((element) => typeof element !== "number");
 }
 
 function hasAtLeastNumber(array) {
-    return checkArray(array) && array.some((element) => typeof value === "number");
+    return checkArray(array) && array.some((element) => typeof element === "number");
 }
 
 function hasOnceNumber(array) {
