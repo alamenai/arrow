@@ -7,4 +7,6 @@ function equalAll(array) {
 
 }
 
-export default equalAll
+export default {
+    equalAll
+}
