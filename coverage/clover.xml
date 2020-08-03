@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596455938445" clover="3.2.0">
-  <project timestamp="1596455938446" name="All files">
-    <metrics statements="175" coveredstatements="175" conditionals="286" coveredconditionals="265" methods="141" coveredmethods="141" elements="602" coveredelements="581" complexity="0" loc="175" ncloc="175" packages="3" files="18" classes="18"/>
+<coverage generated="1596453943803" clover="3.2.0">
+  <project timestamp="1596453943803" name="All files">
+    <metrics statements="173" coveredstatements="173" conditionals="284" coveredconditionals="264" methods="139" coveredmethods="139" elements="596" coveredelements="576" complexity="0" loc="173" ncloc="173" packages="3" files="18" classes="18"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="640" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="558" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="420" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="351" type="stmt"/>
+        <line num="2" count="630" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="550" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="414" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="346" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
@@ -181,7 +181,7 @@
       </file>
     </package>
     <package name="scripts.array.math">
-      <metrics statements="39" coveredstatements="39" conditionals="72" coveredconditionals="58" methods="28" coveredmethods="28"/>
+      <metrics statements="37" coveredstatements="37" conditionals="70" coveredconditionals="57" methods="26" coveredmethods="26"/>
       <file name="abs.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\abs.js">
         <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <line num="6" count="10" type="cond" truecount="1" falsecount="1"/>
@@ -209,15 +209,13 @@
         <line num="17" count="9" type="cond" truecount="3" falsecount="0"/>
       </file>
       <file name="devide.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\devide.js">
-        <metrics statements="8" coveredstatements="8" conditionals="16" coveredconditionals="13" methods="6" coveredmethods="6"/>
+        <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <line num="6" count="12" type="cond" truecount="1" falsecount="1"/>
         <line num="7" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="18" type="cond" truecount="5" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="16" count="10" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="11" type="stmt"/>
-        <line num="21" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="22" count="18" type="cond" truecount="3" falsecount="0"/>
+        <line num="16" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="18" type="cond" truecount="3" falsecount="0"/>
       </file>
       <file name="max.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\max.js">
         <metrics statements="7" coveredstatements="7" conditionals="10" coveredconditionals="8" methods="4" coveredmethods="4"/>
