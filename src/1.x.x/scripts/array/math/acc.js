@@ -4,7 +4,9 @@ import {
 
 export function accBoolean(array) {
     if (checkArray(array)) {
-        return isBooleanArray(array) ? array.reduce((previous, next) => previous && next) : array
+        if (isBooleanArray(array)) {
+            return array.reduce((previous, next) => previous && next)
+        }
     }
 }
 
