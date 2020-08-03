@@ -58,6 +58,10 @@ describe("Accumulate boolean elements", () => {
     it("should return false", () => {
         expect(accBoolean([false, true, false])).toStrictEqual(false);
     });
+    it("should return the same elements for non boolean values", () => {
+        expect(accBoolean([1, 2, 3])).toStrictEqual([1, 2, 3]);
+        expect(accBoolean(["a", "b", "c"])).toStrictEqual(["a", "b", "c"]);
+    });
 
     it("should throw an error", () => {
 
