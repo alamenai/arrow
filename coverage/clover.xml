@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596470695308" clover="3.2.0">
-  <project timestamp="1596470695308" name="All files">
+<coverage generated="1596472433188" clover="3.2.0">
+  <project timestamp="1596472433189" name="All files">
     <metrics statements="10" coveredstatements="10" conditionals="22" coveredconditionals="17" methods="5" coveredmethods="5" elements="37" coveredelements="32" complexity="0" loc="10" ncloc="10" packages="2" files="2" classes="2"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="2" count="9" type="cond" truecount="3" falsecount="1"/>
-        <line num="3" count="9" type="cond" truecount="1" falsecount="1"/>
-        <line num="4" count="9" type="cond" truecount="1" falsecount="1"/>
-        <line num="5" count="9" type="stmt"/>
+        <line num="2" count="6" type="cond" truecount="3" falsecount="1"/>
+        <line num="3" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="6" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.math">
       <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
-      <file name="round.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\round.js">
+      <file name="sin.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\sin.js">
         <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
-        <line num="6" count="5" type="cond" truecount="1" falsecount="1"/>
-        <line num="7" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="14" type="cond" truecount="5" falsecount="0"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="5" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="14" type="cond" truecount="3" falsecount="0"/>
+        <line num="16" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="9" type="cond" truecount="3" falsecount="0"/>
       </file>
     </package>
   </project>
