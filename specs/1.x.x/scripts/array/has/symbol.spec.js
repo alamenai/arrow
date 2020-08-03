@@ -7,29 +7,6 @@ import {
     hasPairSymbol,
 } from "../../../../../src/1.x.x/scripts/array/has/symbol";
 
-function __throwError(func) {
-    function passNumber() {
-        func.length === 1 ? func(0) : func(0, 1);
-    }
-
-    function passString() {
-        func.length === 1 ? func("item") : func("item", 1);
-    }
-
-    function passEmptyArray() {
-        func.length === 1 ? func([]) : func([], 1);
-    }
-
-    function passUndefinedOrNull() {
-        func.length === 1 ? func(undefined || null) : func(undefined || null, 1);
-    }
-
-    expect(passNumber).toThrowError("The parameter should be an array");
-    expect(passString).toThrowError("The parameter should be an array");
-    expect(passEmptyArray).toThrowError("The array is empty");
-    expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-}
-
 describe("Array has any element with type Symbol", () => {
     it("should return true if the array has any element with type Symbol", () => {
         expect(hasAnySymbol([1, 1])).toBeTruthy();
@@ -44,9 +21,6 @@ describe("Array has any element with type Symbol", () => {
             Symbol(1),
             Symbol("item"),
         ])).toBeFalsy();
-    });
-    it("should throw an error", () => {
-        __throwError(hasAnySymbol);
     });
 });
 
@@ -68,9 +42,6 @@ describe("Array has at least an element with type Symbol", () => {
     });
     it("should return false if the array has only undefined elements", () => {
         expect(hasAtLeastSymbol([undefined, undefined])).toBeFalsy();
-    });
-    it("should throw an error", () => {
-        __throwError(hasAtLeastSymbol);
     });
 });
 
@@ -99,9 +70,6 @@ describe("Array has only one element with type Symbol", () => {
         expect(hasOnceSymbol(["item", "item-2"])).toBeFalsy();
         expect(hasOnceSymbol([1, 2])).toBeFalsy();
     });
-    it("should throw error", () => {
-        __throwError(hasOnceSymbol);
-    });
 });
 
 describe("Array has only elements with type Symbol", () => {
@@ -118,9 +86,6 @@ describe("Array has only elements with type Symbol", () => {
     it("should return false if the array has not an element with type Symbol", () => {
         expect(hasOnlySymbol(["item", "item-2"])).toBeFalsy();
         expect(hasOnlySymbol([1, 2])).toBeFalsy();
-    });
-    it("should throw error", () => {
-        __throwError(hasOnlySymbol);
     });
 });
 
@@ -145,9 +110,6 @@ describe("Array has pair elements with type Symbol", () => {
     });
     it("should return false if the array has not an element with type Symbol", () => {
         expect(hasPairSymbol(["item", "item-2"])).toBeFalsy();
-    });
-    it("should throw error", () => {
-        __throwError(hasPairSymbol);
     });
 });
 
@@ -184,9 +146,6 @@ describe("Array has exact elements with type Symbol", () => {
     });
     it("should return false if the array has not an element with type Symbol", () => {
         expect(hasExactSymbol(["item", "item-2"], 2)).toBeFalsy();
-    });
-    it("should throw error if the parameter is not an array", () => {
-        __throwError(hasExactSymbol);
     });
 
     it("should throw error if the second parameter is not a number", () => {

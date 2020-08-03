@@ -19,35 +19,6 @@ describe("Maximum value in an array", () => {
     it("should return the same values that are not numbers", () => {
         expect(max(["a", "b", "c"])).toStrictEqual(["a", "b", "c"]);
     });
-
-    it("should throw an error", () => {
-
-        function passNumber() {
-            max(1)
-        }
-
-        function passString() {
-            max("array")
-        }
-
-        function passEmptyArray() {
-            max([])
-        }
-
-        function passNull() {
-            max(null)
-        }
-
-        function passUndefined() {
-            max(undefined)
-        }
-
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passNull).toThrowError("The parameter is null or undefined");
-        expect(passUndefined).toThrowError("The parameter is null or undefined");
-    });
 });
 
 describe("Maximum value in portion of array", () => {
@@ -68,36 +39,10 @@ describe("Maximum value in portion of array", () => {
     });
 
     it("should throw an error", () => {
-
-        function passNumber() {
-            maxRange(1)
-        }
-
-        function passString() {
-            maxRange("array")
-        }
-
-        function passEmptyArray() {
-            maxRange([])
-        }
-
-        function passNull() {
-            maxRange(null)
-        }
-
-        function passUndefined() {
-            maxRange(undefined)
-        }
-
         function passBigIndex() {
             const array = [-1, -2, -3];
             maxRange(array, 0, 4); // The last index of array is 2
         }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passNull).toThrowError("The parameter is null or undefined");
-        expect(passUndefined).toThrowError("The parameter is null or undefined");
         expect(passBigIndex).toThrowError("The last index of the array is less then 'to' parameter");
     });
 });

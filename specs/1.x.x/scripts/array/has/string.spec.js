@@ -6,30 +6,6 @@ import {
     hasOnlyString,
     hasPairString,
 } from "../../../../../src/1.x.x/scripts/array/has/string";
-
-function __throwError(func) {
-    function passNumber() {
-        func.length === 1 ? func(0) : func(0, 1);
-    }
-
-    function passString() {
-        func.length === 1 ? func("item") : func("item", 1);
-    }
-
-    function passEmptyArray() {
-        func.length === 1 ? func([]) : func([], 1);
-    }
-
-    function passUndefinedOrNull() {
-        func.length === 1 ? func(undefined || null) : func(undefined || null, 1);
-    }
-
-    expect(passNumber).toThrowError("The parameter should be an array");
-    expect(passString).toThrowError("The parameter should be an array");
-    expect(passEmptyArray).toThrowError("The array is empty");
-    expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-}
-
 describe("Array has any element with type String", () => {
     it("should return true if the array has any element with type String", () => {
         expect(hasAnyString([1, 1])).toBeTruthy();
@@ -49,9 +25,7 @@ describe("Array has any element with type String", () => {
             "item-1",
         ])).toBeFalsy();
     });
-    it("should throw an error", () => {
-        __throwError(hasAnyString);
-    });
+
 });
 
 describe("Array has at least an element with type String", () => {
@@ -74,9 +48,7 @@ describe("Array has at least an element with type String", () => {
     it("should return false if the array has only undefined elements", () => {
         expect(hasAtLeastString([undefined, undefined])).toBeFalsy();
     });
-    it("should throw an error", () => {
-        __throwError(hasAtLeastString);
-    });
+
 });
 
 describe("Array has only one element with type String", () => {
@@ -102,9 +74,6 @@ describe("Array has only one element with type String", () => {
         expect(hasOnceString([1, 2])).toBeFalsy();
         expect(hasOnceString([false, true])).toBeFalsy();
     });
-    it("should throw error", () => {
-        __throwError(hasOnceString);
-    });
 });
 
 describe("Array has only elements with type String", () => {
@@ -121,9 +90,7 @@ describe("Array has only elements with type String", () => {
         expect(hasOnlyString([1, 2, 3])).toBeFalsy();
         expect(hasOnlyString([1, true, undefined])).toBeFalsy();
     });
-    it("should throw error", () => {
-        __throwError(hasOnlyString);
-    });
+
 });
 
 describe("Array has pair elements with type String", () => {
@@ -147,9 +114,6 @@ describe("Array has pair elements with type String", () => {
     });
     it("should return false if the array has not an element with type String", () => {
         expect(hasPairString([1, 2, 3])).toBeFalsy();
-    });
-    it("should throw error", () => {
-        __throwError(hasPairString);
     });
 });
 
@@ -187,9 +151,7 @@ describe("Array has exact elements with type String", () => {
     it("should return false if the array has not an element with type String", () => {
         expect(hasExactString([1, 2], 2)).toBeFalsy();
     });
-    it("should throw error if the parameter is not an array", () => {
-        __throwError(hasExactString);
-    });
+
 
     it("should throw error if the second parameter is not a number", () => {
         function passNull() {

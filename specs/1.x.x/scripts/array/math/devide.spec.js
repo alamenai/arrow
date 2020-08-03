@@ -24,36 +24,10 @@ describe("Devide a range of elements at specific value", () => {
         expect(devide(["a", "b", "c"], 0, 1, 2)).toStrictEqual(["a", "b", "c"]);
     });
     it("should throw an error", () => {
-
-        function passNumber() {
-            devide(1, 0, 1, 2)
-        }
-
-        function passString() {
-            devide("array", 0, 1, 2)
-        }
-
-        function passEmptyArray() {
-            devide([], 0, 1, 2)
-        }
-
-        function passNull() {
-            devide(null, 0, 1, 2)
-        }
-
-        function passUndefined() {
-            devide(undefined, 0, 1, 2)
-        }
-
         function passBigIndex() {
             const array = [-1, -2, -3];
             devide(array, 0, 4, 2); // The last index of array is 2
         }
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passNull).toThrowError("The parameter is null or undefined");
-        expect(passUndefined).toThrowError("The parameter is null or undefined");
         expect(passBigIndex).toThrowError("The last index of the array is less then 'to' parameter");
     });
 });
@@ -72,34 +46,7 @@ describe("Devide element by the next element", () => {
         expect(devideSelf([0, 0, 0])).toStrictEqual(NaN);
         expect(devideSelf([Infinity, Infinity, Infinity])).toStrictEqual(NaN);
     });
-    it("should throw an error", () => {
 
-        function passNumber() {
-            devideSelf(1)
-        }
-
-        function passString() {
-            devideSelf("array")
-        }
-
-        function passEmptyArray() {
-            devideSelf([])
-        }
-
-        function passNull() {
-            devideSelf(null)
-        }
-
-        function passUndefined() {
-            devideSelf(undefined)
-        }
-
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passNull).toThrowError("The parameter is null or undefined");
-        expect(passUndefined).toThrowError("The parameter is null or undefined");
-    });
 });
 
 describe("Devide all elements at the same value", () => {
@@ -120,34 +67,5 @@ describe("Devide all elements at the same value", () => {
     });
     it("should return the same values that are not numbers", () => {
         expect(devideAll(["a", "b", "c"], 2)).toStrictEqual(["a", "b", "c"]);
-    });
-
-    it("should throw an error", () => {
-
-        function passNumber() {
-            devideAll(1, 2)
-        }
-
-        function passString() {
-            devideAll("array", 2)
-        }
-
-        function passEmptyArray() {
-            devideAll([], 2)
-        }
-
-        function passNull() {
-            devideAll(null, 2)
-        }
-
-        function passUndefined() {
-            devideAll(undefined, 2)
-        }
-
-        expect(passNumber).toThrowError("The parameter should be an array");
-        expect(passString).toThrowError("The parameter should be an array");
-        expect(passEmptyArray).toThrowError("The array is empty");
-        expect(passNull).toThrowError("The parameter is null or undefined");
-        expect(passUndefined).toThrowError("The parameter is null or undefined");
     });
 });

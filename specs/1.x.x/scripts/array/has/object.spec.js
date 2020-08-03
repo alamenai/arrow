@@ -7,29 +7,6 @@ import {
     hasPairObject,
 } from "../../../../../src/1.x.x/scripts/array/has/object";
 
-function __throwError(func) {
-    function passNumber() {
-        func.length === 1 ? func(0) : func(0, 1);
-    }
-
-    function passString() {
-        func.length === 1 ? func("item") : func("item", 1);
-    }
-
-    function passEmptyArray() {
-        func.length === 1 ? func([]) : func([], 1);
-    }
-
-    function passUndefinedOrNull() {
-        func.length === 1 ? func(undefined || null) : func(undefined || null, 1);
-    }
-
-    expect(passNumber).toThrowError("The parameter should be an array");
-    expect(passString).toThrowError("The parameter should be an array");
-    expect(passEmptyArray).toThrowError("The array is empty");
-    expect(passUndefinedOrNull).toThrowError("The parameter is null or undefined");
-}
-
 describe("Array has any element with type Object", () => {
     it("should return true if the array has any element with type Object", () => {
         expect(hasAnyObject([1, 1])).toBeTruthy();
@@ -60,9 +37,6 @@ describe("Array has any element with type Object", () => {
             d: 4
         }])).toBeFalsy();
     });
-    it("should throw an error", () => {
-        __throwError(hasAnyObject);
-    });
 });
 
 describe("Array has at least an element with type Object", () => {
@@ -91,9 +65,6 @@ describe("Array has at least an element with type Object", () => {
     });
     it("should return false if the array has only undefined elements", () => {
         expect(hasAtLeastObject([undefined, undefined])).toBeFalsy();
-    });
-    it("should throw an error", () => {
-        __throwError(hasAtLeastObject);
     });
 });
 
@@ -130,9 +101,6 @@ describe("Array has only one element with type Object", () => {
         expect(hasOnceObject(["item", "item-2"])).toBeFalsy();
         expect(hasOnceObject([1, 2])).toBeFalsy();
     });
-    it("should throw error", () => {
-        __throwError(hasOnceObject);
-    });
 });
 
 describe("Array has only elements with type Object", () => {
@@ -162,9 +130,6 @@ describe("Array has only elements with type Object", () => {
     it("should return false if the array has not an element with type Object", () => {
         expect(hasOnlyObject(["item", "item-2"])).toBeFalsy();
         expect(hasOnlyObject([1, 2])).toBeFalsy();
-    });
-    it("should throw error", () => {
-        __throwError(hasOnlyObject);
     });
 });
 
@@ -203,9 +168,6 @@ describe("Array has pair elements with type Object", () => {
     });
     it("should return false if the array has not an element with type Object", () => {
         expect(hasPairObject(["item", "item-2"])).toBeFalsy();
-    });
-    it("should throw error", () => {
-        __throwError(hasPairObject);
     });
 });
 
@@ -256,9 +218,6 @@ describe("Array has exact elements with type Object", () => {
     });
     it("should return false if the array has not an element with type Object", () => {
         expect(hasExactObject(["item", "item-2"], 2)).toBeFalsy();
-    });
-    it("should throw error if the parameter is not an array", () => {
-        __throwError(hasExactObject);
     });
 
     it("should throw error if the second parameter is not a number", () => {

@@ -17,7 +17,6 @@ describe("Absolute values for specific range of elements", () => {
         expect(absRange(["a", "b", "c"], 0, 1)).toStrictEqual(["a", "b", "c"]);
     });
 
-
 });
 
 describe("Absolute values for all elements", () => {
