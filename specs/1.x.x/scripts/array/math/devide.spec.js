@@ -1,6 +1,7 @@
 import {
     devide,
-    devideAll
+    devideAll,
+    devideSelf
 } from "../../../../../src/1.x.x/scripts/array/math/devide"
 
 describe("Devide a range of elements at specific value", () => {
@@ -54,6 +55,50 @@ describe("Devide a range of elements at specific value", () => {
         expect(passNull).toThrowError("The parameter is null or undefined");
         expect(passUndefined).toThrowError("The parameter is null or undefined");
         expect(passBigIndex).toThrowError("The last index of the array is less then 'to' parameter");
+    });
+});
+
+describe("Devide element by the next element", () => {
+    it("should return positive value for positive elements and positive devider", () => {
+        expect(devideSelf([6, 2, 3])).toStrictEqual(1);
+    });
+    it("should return negative value for 2n+1 negative elements", () => {
+        expect(devideSelf([-6, -2, -3])).toStrictEqual(-1);
+    });
+    it("should return negative value for 2n+1 negative elements", () => {
+        expect(devideSelf([-12, -3, -2, -2])).toStrictEqual(1);
+    });
+    it("should return NaN value for elements that equal 0 or Infinity", () => {
+        expect(devideSelf([0, 0, 0])).toStrictEqual(NaN);
+        expect(devideSelf([Infinity, Infinity, Infinity])).toStrictEqual(NaN);
+    });
+    it("should throw an error", () => {
+
+        function passNumber() {
+            devideSelf(1)
+        }
+
+        function passString() {
+            devideSelf("array")
+        }
+
+        function passEmptyArray() {
+            devideSelf([])
+        }
+
+        function passNull() {
+            devideSelf(null)
+        }
+
+        function passUndefined() {
+            devideSelf(undefined)
+        }
+
+        expect(passNumber).toThrowError("The parameter should be an array");
+        expect(passString).toThrowError("The parameter should be an array");
+        expect(passEmptyArray).toThrowError("The array is empty");
+        expect(passNull).toThrowError("The parameter is null or undefined");
+        expect(passUndefined).toThrowError("The parameter is null or undefined");
     });
 });
 
