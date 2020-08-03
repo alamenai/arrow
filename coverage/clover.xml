@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596457925791" clover="3.2.0">
-  <project timestamp="1596457925791" name="All files">
+<coverage generated="1596458727677" clover="3.2.0">
+  <project timestamp="1596458727677" name="All files">
     <metrics statements="175" coveredstatements="175" conditionals="286" coveredconditionals="265" methods="141" coveredmethods="141" elements="602" coveredelements="581" complexity="0" loc="175" ncloc="175" packages="3" files="19" classes="19"/>
     <package name="helpers">
       <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="640" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="558" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="420" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="645" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="561" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="421" type="cond" truecount="2" falsecount="0"/>
         <line num="5" count="351" type="stmt"/>
       </file>
       <file name="is.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\is.js">
