@@ -2,7 +2,7 @@ import {
     checkArray
 } from "../../../helpers/check";
 
-export function abs(array, from, to) {
+export function absRange(array, from, to) {
     if (checkArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && Math.abs(element)) || element)
@@ -12,7 +12,7 @@ export function abs(array, from, to) {
     }
 }
 
-export function absAll(array) {
+export function abs(array) {
     if (checkArray(array)) {
         return array.map(element => (typeof element === "number" && Math.abs(element)) || element)
     }
