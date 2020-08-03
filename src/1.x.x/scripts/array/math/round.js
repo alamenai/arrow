@@ -2,7 +2,7 @@ import {
     checkArray
 } from "../../../helpers/check";
 
-export function powRange(array, from, to) {
+export function roundRange(array, from, to) {
     if (checkArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = Math.round(element)) || element))
@@ -12,7 +12,7 @@ export function powRange(array, from, to) {
     }
 }
 
-export function pow(array) {
+export function round(array) {
     if (checkArray(array)) {
         return array.map(element => (typeof element === "number" && (element = Math.round(element))) || element)
     }
