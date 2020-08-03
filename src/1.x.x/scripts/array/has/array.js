@@ -12,7 +12,7 @@ export function hasAtLeastArray(array) {
 
 export function hasOnceArray(array) {
     return checkArray(array) && (array.reduce((acc, element) => {
-        if (acc === 2) return 2;
+        if (acc === 2) return acc;
         if (Array.isArray(element)) acc += 1;
         return acc;
     }, 0) === 1);

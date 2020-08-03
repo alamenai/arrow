@@ -49,19 +49,19 @@ describe("Array has at least an element with type Array", () => {
 describe("Array has only one element with type Array", () => {
     it("should return true if the array has only one element with type Array", () => {
         expect(hasOnceArray([
-            [1, 2],
+            [1, 2]
         ])).toBeTruthy();
         expect(hasOnceArray([
-            [1, 2], 1,
+            [1, 2], 1
         ])).toBeTruthy();
         expect(hasOnceArray([
-            [1, 2], "item",
+            [1, 2], "item"
         ])).toBeTruthy();
     });
     it("should return false if the array has only elements with type Array", () => {
         expect(hasOnceArray([
             [1, 2],
-            [3, 4],
+            [3, 4]
         ])).toBeFalsy();
     });
     it("should return false if the array has only undefined elements", () => {
