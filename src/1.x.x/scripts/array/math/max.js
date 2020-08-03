@@ -2,6 +2,10 @@ import {
     checkArray
 } from "../../../helpers/check";
 
+import {
+    isNumberArray
+} from "../../../helpers/is";
+
 export function max(array) {
     if (checkArray(array)) {
         return isNumberArray(array) ? Math.max(...array) : array
@@ -16,8 +20,4 @@ export function maxRange(array, from, to) {
             throw new Error("The last index of the array is less then 'to' parameter")
         }
     }
-}
-
-function isNumberArray(array) {
-    return array.every(element => typeof element === "number")
 }
