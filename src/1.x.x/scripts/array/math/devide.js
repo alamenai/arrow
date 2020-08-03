@@ -12,6 +12,12 @@ export function devide(array, from, to, devider) {
     }
 }
 
+export function devideSelf(array) {
+    if (checkArray(array)) {
+        return array.reduce((previous, next) => previous / next)
+    }
+}
+
 export function devideAll(array, devider) {
     if (checkArray(array)) {
         return array.map(element => (typeof element === "number" && element / devider) || element)
