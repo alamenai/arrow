@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596414591824" clover="3.2.0">
-  <project timestamp="1596414591825" name="All files">
-    <metrics statements="148" coveredstatements="148" conditionals="236" coveredconditionals="224" methods="123" coveredmethods="123" elements="507" coveredelements="495" complexity="0" loc="148" ncloc="148" packages="3" files="14" classes="14"/>
+<coverage generated="1596417185136" clover="3.2.0">
+  <project timestamp="1596417185136" name="All files">
+    <metrics statements="154" coveredstatements="154" conditionals="250" coveredconditionals="236" methods="127" coveredmethods="127" elements="531" coveredelements="517" complexity="0" loc="154" ncloc="154" packages="3" files="15" classes="15"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="549" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="485" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="365" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="305" type="stmt"/>
+        <line num="2" count="565" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="497" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="373" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="311" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
@@ -181,7 +181,7 @@
       </file>
     </package>
     <package name="scripts.array.math">
-      <metrics statements="12" coveredstatements="12" conditionals="22" coveredconditionals="17" methods="10" coveredmethods="10"/>
+      <metrics statements="18" coveredstatements="18" conditionals="36" coveredconditionals="29" methods="14" coveredmethods="14"/>
       <file name="abs.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\abs.js">
         <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <line num="6" count="10" type="cond" truecount="1" falsecount="1"/>
@@ -193,12 +193,21 @@
       </file>
       <file name="acc.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\acc.js">
         <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="6" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+      </file>
+      <file name="cos.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\cos.js">
+        <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="6" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="cond" truecount="5" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="16" count="8" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="9" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="8" type="stmt"/>
-        <line num="30" count="9" type="stmt"/>
+        <line num="17" count="9" type="cond" truecount="3" falsecount="0"/>
       </file>
     </package>
   </project>
