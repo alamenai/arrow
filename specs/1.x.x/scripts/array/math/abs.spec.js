@@ -3,6 +3,8 @@ import {
     abs
 } from "../../../../../src/1.x.x/scripts/array/math/abs"
 
+import "../../../helpers/check.spec"
+
 describe("Absolute values for specific range of elements", () => {
     it("should return positive values for positive values", () => {
         expect(absRange([1, 2, 3], 0, 1)).toStrictEqual([1, 2, 3]);
@@ -17,6 +19,7 @@ describe("Absolute values for specific range of elements", () => {
         expect(absRange(["a", "b", "c"], 0, 1)).toStrictEqual(["a", "b", "c"]);
     });
     it("should throw an error", () => {
+
         function passBigIndex() {
             const array = [-1, -2, -3];
             absRange(array, 0, 4); // The last index of array is 2
