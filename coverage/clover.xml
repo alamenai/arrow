@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596412701252" clover="3.2.0">
-  <project timestamp="1596412701252" name="All files">
-    <metrics statements="142" coveredstatements="142" conditionals="228" coveredconditionals="219" methods="117" coveredmethods="117" elements="487" coveredelements="478" complexity="0" loc="142" ncloc="142" packages="3" files="13" classes="13"/>
+<coverage generated="1596414591824" clover="3.2.0">
+  <project timestamp="1596414591825" name="All files">
+    <metrics statements="148" coveredstatements="148" conditionals="236" coveredconditionals="224" methods="123" coveredmethods="123" elements="507" coveredelements="495" complexity="0" loc="148" ncloc="148" packages="3" files="14" classes="14"/>
     <package name="helpers">
       <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
       <file name="check.js" path="D:\open-source\arrow-js\src\1.x.x\helpers\check.js">
         <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="2" count="532" type="cond" truecount="4" falsecount="0"/>
-        <line num="3" count="472" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="356" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="298" type="stmt"/>
+        <line num="2" count="549" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="485" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="365" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="305" type="stmt"/>
       </file>
     </package>
     <package name="scripts.array.has">
@@ -181,7 +181,7 @@
       </file>
     </package>
     <package name="scripts.array.math">
-      <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
+      <metrics statements="12" coveredstatements="12" conditionals="22" coveredconditionals="17" methods="10" coveredmethods="10"/>
       <file name="abs.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\abs.js">
         <metrics statements="6" coveredstatements="6" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
         <line num="6" count="10" type="cond" truecount="1" falsecount="1"/>
@@ -190,6 +190,15 @@
         <line num="10" count="1" type="stmt"/>
         <line num="16" count="9" type="cond" truecount="1" falsecount="1"/>
         <line num="17" count="14" type="cond" truecount="3" falsecount="0"/>
+      </file>
+      <file name="acc.js" path="D:\open-source\arrow-js\src\1.x.x\scripts\array\math\acc.js">
+        <metrics statements="6" coveredstatements="6" conditionals="8" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="16" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
       </file>
     </package>
   </project>
