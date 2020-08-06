@@ -48,6 +48,9 @@ export function orderRangeDescBy(array, from, to, criteria = null) {
         // Write your code here and remove the examples above
         // Run the test : npm run test:spec
         // Expected commit: :zap: Implement orderRangeDescBy() function
+        /**
+         * Hint : COMMITS_TEMPLATE to know how to write your commits or see previous commits
+         */
     }
 
 }
