@@ -1,7 +1,7 @@
 {
     "name": "arrow",
     "version": "1.0.0",
-    "description": "A tiny javascript library for solving complex problems that are related to arrays",
+    "description": "A tiny Javascript library for solving complex problems that are related to arrays",
     "main": "index.js",
     "scripts": {
         "lint": "eslint ./**",
@@ -9,8 +9,8 @@
         "lint:src": "eslint ./src",
         "lint:src:fix": "eslint ./src --fix",
         "lint:fix-cache": "eslint ./** --fix --cache",
-        "test": "jest --config=jest.config.js --detectOpenHandles",
-        "test:spec": "jest ./specs/1.x.x/scripts/array/order.spec.js --config=jest.config.js --detectOpenHandles",
+        "test": "jest --config=jest.config.js --detectOpenHandles --watch",
+        "test:spec": "jest ./specs/1.x.x/scripts/array/order.spec.js --config=jest.config.js --detectOpenHandles --watch",
         "push": "git push"
     },
     "repository": {
