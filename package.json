@@ -10,7 +10,7 @@
         "lint:src:fix": "eslint ./src --fix",
         "lint:fix-cache": "eslint ./** --fix --cache",
         "test": "jest --config=jest.config.js --detectOpenHandles",
-        "test:spec": "jest ./specs/1.x.x/scripts/array/math/sign.spec.js --config=jest.config.js --detectOpenHandles",
+        "test:spec": "jest ./specs/1.x.x/scripts/array/order.spec.js --config=jest.config.js --detectOpenHandles",
         "push": "git push"
     },
     "repository": {

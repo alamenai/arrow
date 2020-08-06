@@ -109,6 +109,18 @@ describe("Order an array", () => {
         }]);
     });
 
+    it("should throw an error when the elements have not the same type", () => {
+
+        function hasDifferentTypes() {
+            const array = [{
+                id: 1
+            }, 2, 3]; // The first element (item) is an object and the second is a number
+
+            orderDescBy(array, 'name', 0, 1); // The name key does not exist in the array
+        }
+        expect(hasDifferentTypes).toThrowError("The elements has different types");
+    });
+
     it("should throw an error when the key does not exist in the object", () => {
         function passUndefinedKey() {
             const array = [{
