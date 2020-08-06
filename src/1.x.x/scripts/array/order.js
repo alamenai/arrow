@@ -11,6 +11,7 @@ import {
 
 export function orderRangeDescBy(array, from, to, criteria = null) {
     // Order a range of an array by a specific criteria
+    // criteria is an optional parameter and it's useful only for arrays that contain objects
     // Let's assume that we have this array
     const users = [{
             id: 1,
@@ -55,7 +56,7 @@ export function orderRangeDescBy(array, from, to, criteria = null) {
 
 }
 
-export function orderDescBy(array, criteria) {
+export function orderDescBy(array, criteria = null) {
     // Order an array by a specific criteria
     // Let's assume that we have this array
     const users = [{
