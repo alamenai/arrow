@@ -61,13 +61,13 @@ describe("Order a range of an array", () => {
 });
 describe("Order an array", () => {
     it("should return descent ordered numbers", () => {
-        expect(orderDescBy([1, 2, 3, 4, 5, 6])).toStrictEqual([6, 5, 4, 3, 2, 1]);
+        expect(orderDesc([1, 2, 3, 4, 5, 6])).toStrictEqual([6, 5, 4, 3, 2, 1]);
     });
     it("should return descent ordered strings", () => {
-        expect(orderDescBy(["aaa", "baa", "cbb", "dee", "ecc", "faa"], 1, 3)).toStrictEqual(["faa", "ecc", "dee", "cbb", "baa", "aaa"]);
+        expect(orderDesc(["aaa", "baa", "cbb", "dee", "ecc", "faa"], 1, 3)).toStrictEqual(["faa", "ecc", "dee", "cbb", "baa", "aaa"]);
     });
     it("should return descent ordered objects", () => {
-        expect(orderDescBy([{
+        expect(orderDesc([{
             id: 1
         }, {
             id: 2
