@@ -1,9 +1,8 @@
 import {
-    isArray
-} from "../../helpers/is"
-import {
+    isArray,
     isObjectArray
 } from "../../helpers/is"
+
 import {
     hasElement
 } from "../../helpers/has"
