@@ -1,3 +1,9 @@
+export function isArray(array) {
+    if (array === null || array === undefined) throw new Error("The parameter is null or undefined");
+    if (!Array.isArray(array)) throw new Error("The parameter should be an array");
+    if (array.length === 0) throw new Error("The array is empty");
+    return true;
+}
 export function isNumberArray(array) {
     return array.every(element => typeof element === "number")
 }
