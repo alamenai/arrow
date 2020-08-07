@@ -1,6 +1,6 @@
 import {
     isArray
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function sinRange(array, from, to) {
     if (isArray(array)) {

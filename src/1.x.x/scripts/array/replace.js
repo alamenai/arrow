@@ -7,7 +7,7 @@
 
 import {
     isArray
-} from "../../helpers/check"
+} from "../../helpers/is"
 
 export function replace(array, element, replacer) {
     // Replace an element with other element in an array

@@ -1,6 +1,6 @@
 import {
     isArray
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 function isObject(element) {
     return typeof element === "object" && !Array.isArray(element)

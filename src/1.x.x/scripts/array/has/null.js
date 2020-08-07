@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 function isNull(element) {
     return element === null

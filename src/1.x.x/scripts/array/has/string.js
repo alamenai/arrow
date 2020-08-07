@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 function isString(element) {
     return typeof element === "string"

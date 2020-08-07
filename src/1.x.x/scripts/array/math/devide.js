@@ -1,6 +1,6 @@
 import {
     isArray
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function devideRange(array, from, to, devider) {
     if (isArray(array)) {

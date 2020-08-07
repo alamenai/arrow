@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function hasAnyNumber(array) {
     return isArray(array) && array.every((element) => typeof element !== "number");

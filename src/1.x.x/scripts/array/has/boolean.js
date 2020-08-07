@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function hasAnyBoolean(array) {
     return isArray(array) && (!array.includes(true) && !array.includes(false));

@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function hasAnyInfinity(array) {
     return isArray(array) && array.every((element) => element !== Infinity);

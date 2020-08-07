@@ -1,6 +1,6 @@
 import {
     isArray
-} from "../../helpers/check"
+} from "../../helpers/is"
 import {
     isObjectArray
 } from "../../helpers/is"

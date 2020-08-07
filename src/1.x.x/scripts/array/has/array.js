@@ -1,6 +1,6 @@
 import {
     isArray,
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function hasAnyArray(array) {
     return isArray(array) && !array.every((element) => Array.isArray(element));

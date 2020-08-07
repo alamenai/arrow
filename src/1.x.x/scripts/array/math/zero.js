@@ -1,6 +1,6 @@
 import {
     isArray
-} from "../../../helpers/check";
+} from "../../../helpers/is";
 
 export function zeroRange(array, from, to) {
     if (isArray(array)) {
