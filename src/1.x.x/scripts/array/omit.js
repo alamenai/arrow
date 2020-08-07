@@ -17,6 +17,18 @@ export function omit(array, element) {
     }
 }
 
+export function omitArray(array, omittedArray) {
+    if (isArray(array) && isArray(omittedArray)) {
+        for (let element of omittedArray) {
+            if (!hasElement(array, element)) {
+                throw new Error(element + " does not exist")
+            }
+            isObjectArray(array) ? array = filterByObject(array, element) : array = filterByValue(array, element)
+        }
+        return array
+    }
+}
+
 export function omitMany(array, ...elements) {
 
     if (isArray(array)) {
