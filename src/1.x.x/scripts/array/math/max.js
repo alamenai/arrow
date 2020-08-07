@@ -1,5 +1,5 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 import {
@@ -7,13 +7,13 @@ import {
 } from "../../../helpers/is";
 
 export function max(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return isNumberArray(array) ? Math.max(...array) : array
     }
 }
 
 export function maxRange(array, from, to) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return isNumberArray(array) ? Math.max(...array.slice(from, to + 1)) : array
         } else {

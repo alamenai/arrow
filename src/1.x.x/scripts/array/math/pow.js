@@ -1,9 +1,9 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 export function powRange(array, from, to, power) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = Math.pow(element, power))) || element)
         } else {
@@ -13,7 +13,7 @@ export function powRange(array, from, to, power) {
 }
 
 export function pow(array, power) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = Math.pow(element, power))) || element)
     }
 }

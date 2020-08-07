@@ -1,9 +1,9 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 export function zeroRange(array, from, to) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = 0)) || element)
         } else {
@@ -13,7 +13,7 @@ export function zeroRange(array, from, to) {
 }
 
 export function zero(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = 0)) || element)
     }
 }

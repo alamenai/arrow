@@ -1,5 +1,5 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 import {
@@ -7,7 +7,7 @@ import {
 } from "../../../helpers/is";
 
 export function multiplyRange(array, from, to, multiplier) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = element * multiplier)) || element)
         } else {
@@ -16,13 +16,13 @@ export function multiplyRange(array, from, to, multiplier) {
     }
 }
 export function multiplySelf(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return isNumberArray(array) ? array.reduce((previous, next) => previous * next) : array
     }
 }
 
 export function multiply(array, multiplier) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = element * multiplier)) || element)
     }
 }

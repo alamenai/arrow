@@ -1,5 +1,5 @@
 import {
-    checkArray,
+    isArray,
 } from "../../../helpers/check";
 
 function isNull(element) {
@@ -7,15 +7,15 @@ function isNull(element) {
 }
 
 export function hasAnyNull(array) {
-    return checkArray(array) && !array.every(element => isNull(element));
+    return isArray(array) && !array.every(element => isNull(element));
 }
 
 export function hasAtLeastNull(array) {
-    return checkArray(array) && array.some(element => isNull(element));
+    return isArray(array) && array.some(element => isNull(element));
 }
 
 export function hasOnceNull(array) {
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (isNull(element)) acc += 1;
         return acc;
@@ -23,11 +23,11 @@ export function hasOnceNull(array) {
 }
 
 export function hasOnlyNull(array) {
-    return checkArray(array) && array.every((element) => isNull(element));
+    return isArray(array) && array.every((element) => isNull(element));
 }
 
 export function hasPairNull(array) {
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (isNull(element)) acc += 1;
         return acc;
     }, 0) === 2);
@@ -35,7 +35,7 @@ export function hasPairNull(array) {
 
 export function hasExactNull(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (isNull(element)) acc += 1;
         return acc;
     }, 0) === nullCount);

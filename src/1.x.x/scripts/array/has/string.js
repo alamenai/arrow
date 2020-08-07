@@ -1,5 +1,5 @@
 import {
-    checkArray,
+    isArray,
 } from "../../../helpers/check";
 
 function isString(element) {
@@ -7,15 +7,15 @@ function isString(element) {
 }
 
 export function hasAnyString(array) {
-    return checkArray(array) && !array.every((element) => isString(element));
+    return isArray(array) && !array.every((element) => isString(element));
 }
 
 export function hasAtLeastString(array) {
-    return checkArray(array) && array.some((element) => isString(element));
+    return isArray(array) && array.some((element) => isString(element));
 }
 
 export function hasOnceString(array) {
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (isString(element)) acc += 1;
         return acc;
@@ -23,11 +23,11 @@ export function hasOnceString(array) {
 }
 
 export function hasOnlyString(array) {
-    return checkArray(array) && array.every((element) => isString(element));
+    return isArray(array) && array.every((element) => isString(element));
 }
 
 export function hasPairString(array) {
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (isString(element)) acc += 1;
         return acc;
     }, 0) === 2);
@@ -35,7 +35,7 @@ export function hasPairString(array) {
 
 export function hasExactString(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
-    return checkArray(array) && (array.reduce((acc, element) => {
+    return isArray(array) && (array.reduce((acc, element) => {
         if (isString(element)) acc += 1;
         return acc;
     }, 0) === nullCount);

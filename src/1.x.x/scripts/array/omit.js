@@ -1,5 +1,5 @@
 import {
-    checkArray
+    isArray
 } from "../../helpers/check"
 import {
     isObjectArray
@@ -9,7 +9,7 @@ import {
 } from "../../helpers/has"
 
 export function omit(array, element) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (!hasElement(array, element)) {
             throw new Error(element + " does not exist")
         }
@@ -19,7 +19,7 @@ export function omit(array, element) {
 
 export function omitMany(array, ...elements) {
 
-    if (checkArray(array)) {
+    if (isArray(array)) {
         for (let element of elements) {
             if (!hasElement(array, element)) {
                 throw new Error(element + " does not exist")

@@ -1,7 +1,7 @@
 import {
-    checkArray,
+    isArray,
 } from "../../../helpers/check";
 
 export function uniqueAll(array) {
-    return checkArray(array) && (new Set(array).size === array.length)
+    return isArray(array) && (new Set(array).size === array.length)
 }

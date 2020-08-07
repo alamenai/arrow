@@ -1,15 +1,15 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 export function min(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return isNumberArray(array) ? Math.min(...array) : array
     }
 }
 
 export function minRange(array, from, to) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return isNumberArray(array) ? Math.min(...array.slice(from, to + 1)) : array
         } else {

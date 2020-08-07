@@ -6,7 +6,7 @@
  */
 
 import {
-    checkArray
+    isArray
 } from "../../helpers/check"
 
 export function replace(array, element, replacer) {
@@ -25,7 +25,7 @@ export function replace(array, element, replacer) {
             d: 4
         }] // if element a and the replacer =2 the result will be : [{a:2},{b:2},{c:3},{d:4}
 
-    if (checkArray(array)) {
+    if (isArray(array)) {
         // Write your code here and remove the examples above
         // Run the test : npm run test:spec
         // Expected commit: :zap: Implement replace() function
@@ -50,7 +50,7 @@ export function replaceMany(array, ...elements, ...replacers) {
             d: 4
         }] // if elements=[a,b] and the replacers=[5,6] the result will be : [{a:5},{b:6},{c:3},{d:4}]
 
-    if (checkArray(array)) {
+    if (isArray(array)) {
         // Write your code here and remove the examples above
         // Run the test : npm run test:spec
         // Expected commit: :zap: Implement replaceMany() function

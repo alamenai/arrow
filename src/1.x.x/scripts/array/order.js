@@ -1,5 +1,5 @@
 import {
-    checkArray
+    isArray
 } from "../../helpers/check"
 
 import {
@@ -8,7 +8,7 @@ import {
 
 export function orderRangeDesc(array, from, to) {
 
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             if (isPrimitiveArray(array)) {
                 const sortedArray = array.slice(from, to + 1).sort((a, b) => -1)
@@ -27,7 +27,7 @@ export function orderRangeDesc(array, from, to) {
 }
 
 export function orderDesc(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (isPrimitiveArray(array)) {
             return array.sort((a, b) => -1)
         }

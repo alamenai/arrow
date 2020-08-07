@@ -1,9 +1,9 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 export function sinRange(array, from, to) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = Math.sin(element))) || element)
         } else {
@@ -13,7 +13,7 @@ export function sinRange(array, from, to) {
 }
 
 export function sin(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = Math.sin(element))) || element)
     }
 }

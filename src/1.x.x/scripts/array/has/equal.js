@@ -1,7 +1,7 @@
 import {
-    checkArray,
+    isArray,
 } from "../../../helpers/check";
 
 export function equalAll(array) {
-    return checkArray(array) && new Set(array).size === 1;
+    return isArray(array) && new Set(array).size === 1;
 }

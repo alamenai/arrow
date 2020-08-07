@@ -1,5 +1,5 @@
 import {
-    checkArray
+    isArray
 } from "../../../helpers/check";
 
 import {
@@ -7,13 +7,13 @@ import {
 } from "../../../helpers/is";
 
 export function accBoolean(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return isBooleanArray(array) ? array.reduce((previous, next) => previous && next) : array
     }
 }
 
 export function accAll(array) {
-    if (checkArray(array)) {
+    if (isArray(array)) {
         return array.reduce((previous, next) => previous + next)
     }
 }

@@ -14,7 +14,7 @@ export function concatRange(array, from, to, value) {
         // When the developer call the API like this : concatRange(array,from,to,value)
     const concatedArray = [1, "2github", "3github", "4github", 5, 6]
     const concatedArray2 = [1, 25, 35, 45, 5, 6] // supposed value = 5
-    if (checkArray(array)) {
+    if (isArray(array)) {
         // Write your code here and remove the examples above
         // Run the test : npm run test:spec
         // Expected commit: :zap: Implement concatRange() function
@@ -23,7 +23,7 @@ export function concatRange(array, from, to, value) {
 }
 export function concat(array, value) {
     // Concat the value with all items
-    if (checkArray(array)) {
+    if (isArray(array)) {
         // Write your code here and remove the examples above
         // Run the test : npm run test:spec
         // Expected commit: :zap: Implement concat() function
