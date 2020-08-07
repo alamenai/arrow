@@ -3,14 +3,14 @@ import {
 } from "../../helpers/check"
 
 import {
-    isPrimitive
+    isPrimitiveArray
 } from "../../helpers/is"
 
 export function orderRangeDesc(array, from, to) {
 
     if (checkArray(array)) {
         if (to < array.length) {
-            if (isPrimitive(array)) {
+            if (isPrimitiveArray(array)) {
                 const sortedArray = array.slice(from, to + 1).sort((a, b) => -1)
                 let pointer = 0;
                 for (let index = from; index < to + 1; index++) {
@@ -28,7 +28,7 @@ export function orderRangeDesc(array, from, to) {
 
 export function orderDesc(array) {
     if (checkArray(array)) {
-        if (isPrimitive(array)) {
+        if (isPrimitiveArray(array)) {
             return array.sort((a, b) => -1)
         }
     } else {
