@@ -37,21 +37,6 @@ describe("Order a range of an array", () => {
             id: 6
         }]);
     });
-    it("should throw an error when the key does not exist in the object", () => {
-
-        function passUndefinedKey() {
-            const array = [{
-                id: 1
-            }, {
-                id: 2
-            }, {
-                id: 3
-            }];
-            orderDescBy(array, 'name', 0, 1); // The name key does not exist in the array
-        }
-        expect(passUndefinedKey).toThrowError("This key is undefined in any object in this array");
-    });
-
     it("should throw an error when the elements have not the same type", () => {
 
         function hasDifferentTypes() {
@@ -59,7 +44,7 @@ describe("Order a range of an array", () => {
                 id: 1
             }, 2, 3]; // The first element (item) is an object and the second is a number
 
-            orderDescBy(array, 'name', 0, 1); // The name key does not exist in the array
+            orderRangeDescBy(array, 0, 1); // The name key does not exist in the array
         }
         expect(hasDifferentTypes).toThrowError("The elements has different types");
     });
@@ -116,22 +101,9 @@ describe("Order an array", () => {
                 id: 1
             }, 2, 3]; // The first element (item) is an object and the second is a number
 
-            orderDescBy(array, 'name', 0, 1); // The name key does not exist in the array
+            orderDescBy(array); // The name key does not exist in the array
         }
         expect(hasDifferentTypes).toThrowError("The elements has different types");
     });
 
-    it("should throw an error when the key does not exist in the object", () => {
-        function passUndefinedKey() {
-            const array = [{
-                id: 1
-            }, {
-                id: 2
-            }, {
-                id: 3
-            }];
-            orderDescBy(array, 'name'); // The last index of array is 5
-        }
-        expect(passUndefinedKey).toThrowError("This key is undefined in any object in this array");
-    });
 });
