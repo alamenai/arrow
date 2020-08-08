@@ -17,14 +17,14 @@ export function howManyString(array) {
     return array.filter(element => typeof element === "string").length
 }
 export function howManyObject(array) {
-    return array.filter(element => typeof element === "object").length
+    return array.filter(element => typeof element === "object" && element !== null && element !== undefined).length
 }
 export function howManyArray(array) {
     return array.filter(element => Array.isArray(element)).length
 }
-export function howManyOdd(array = []) {
+export function howManyOdd(array) {
     return array.filter(element => typeof element === "number" && element % 2 === 1).length
 }
-export function howManyNotOdd(array = []) {
+export function howManyPair(array) {
     return array.filter(element => typeof element === "number" && element % 2 === 0).length
 }
