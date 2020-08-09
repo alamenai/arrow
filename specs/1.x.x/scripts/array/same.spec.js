@@ -11,4 +11,8 @@ describe("Find same elements between many arrays", () => {
     it("should return an empty array ", () => {
         expect(same([1, 2], [3, 4], [5, 6])).toStrictEqual([]);
     })
+
+    it("should return the original array ", () => {
+        expect(same([1, 2])).toStrictEqual([1, 2]);
+    })
 });
