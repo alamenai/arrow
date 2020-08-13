@@ -8,10 +8,10 @@ describe("Calculate the average of an array", () => {
     it("should return  positive value for positive elements", () => {
         expect(average([1, 2, 3])).toStrictEqual((1 + 2 + 3) / 3);
     });
-    it("should return 0 when an element is equal to  Infinity", () => {
+    it("should return Infinity when an element is equal to  Infinity", () => {
         expect(average([1, 2, Infinity])).toStrictEqual((1 + 2 + Infinity) / 3);
     });
-    it("should return 0 when all elements are equal to Infinity", () => {
+    it("should return Infinity when all elements are equal to Infinity", () => {
         expect(average([Infinity, Infinity, Infinity])).toStrictEqual((Infinity + Infinity + Infinity) / 3);
     });
     it("should return negative value for negative elements", () => {
