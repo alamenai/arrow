@@ -15,7 +15,7 @@ describe("Calculate the average of an array", () => {
         expect(average([Infinity, Infinity, Infinity])).toStrictEqual((Infinity + Infinity + Infinity) / 3);
     });
     it("should return negative value for negative elements", () => {
-        expect(average([-1, -2, -3])).toStrictEqual((-1 + (-2) + (-2)) / 3);
+        expect(average([-1, -2, -3])).toStrictEqual((-1 + (-2) + (-3)) / 3);
     });
     it("should make cohersion for numbers-like strings", () => {
         expect(average(["1", "2", "3"])).toStrictEqual((1 + 2 + 3) / 3);

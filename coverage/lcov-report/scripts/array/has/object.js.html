@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for scripts/array/has/null.js</title>
+    <title>Code coverage report for scripts/array/has/object.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">scripts/array/has</a> null.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">scripts/array/has</a> object.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.45% </span>
+                <span class="strong">95.83% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>21/22</span>
+                <span class='fraction'>23/24</span>
             </div>
         
             
@@ -103,11 +103,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">57x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,15 +111,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,50 +134,50 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
-    isArray,
+    isArray
 } from "../../../helpers/is";
 &nbsp;
-function isNull(element) {
-    return element === null
+function isObject(element) {
+    return typeof element === "object" &amp;&amp; !Array.isArray(element)
 }
 &nbsp;
-export function hasAnyNull(array) {
-    return isArray(array) &amp;&amp; !array.every(element =&gt; isNull(element));
+export function hasAnyObject(array) {
+    return isArray(array) &amp;&amp; !array.every(element =&gt; isObject(element))
 }
 &nbsp;
-export function hasAtLeastNull(array) {
-    return isArray(array) &amp;&amp; array.some(element =&gt; isNull(element));
+export function hasAtLeastObject(array) {
+    return isArray(array) &amp;&amp; array.some(element =&gt; isObject(element))
 }
 &nbsp;
-export function hasOnceNull(array) {
+export function hasOnceObject(array) {
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
         <span class="missing-if-branch" title="if path not taken" >I</span>if (acc === 2) <span class="cstat-no" title="statement not covered" >return 2;</span>
-        if (isNull(element)) acc += 1;
+        if (isObject(element)) acc += 1;
         return acc;
     }, 0) === 1);
 }
 &nbsp;
-export function hasOnlyNull(array) {
-    return isArray(array) &amp;&amp; array.every((element) =&gt; isNull(element));
+export function hasOnlyObject(array) {
+    return isArray(array) &amp;&amp; array.every((element) =&gt; isObject(element));
 }
 &nbsp;
-export function hasPairNull(array) {
+export function hasPairObject(array) {
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
-        if (isNull(element)) acc += 1;
+        if (isObject(element)) acc += 1;
         return acc;
     }, 0) === 2);
 }
 &nbsp;
-export function hasExactNull(array, nullCount) {
+export function hasExactObject(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
-        if (isNull(element)) acc += 1;
+        if (isObject(element)) acc += 1;
         return acc;
     }, 0) === nullCount);
 }</pre></td></tr></table></pre>

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for scripts/array/has/null.js</title>
+    <title>Code coverage report for scripts/array/has/symbol.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">scripts/array/has</a> null.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">scripts/array/has</a> symbol.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -103,27 +103,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">52x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">58x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,41 +143,41 @@
     isArray,
 } from "../../../helpers/is";
 &nbsp;
-function isNull(element) {
-    return element === null
+function isSymbol(element) {
+    return typeof element === "symbol"
 }
 &nbsp;
-export function hasAnyNull(array) {
-    return isArray(array) &amp;&amp; !array.every(element =&gt; isNull(element));
+export function hasAnySymbol(array) {
+    return isArray(array) &amp;&amp; !array.every((element) =&gt; isSymbol(element));
 }
 &nbsp;
-export function hasAtLeastNull(array) {
-    return isArray(array) &amp;&amp; array.some(element =&gt; isNull(element));
+export function hasAtLeastSymbol(array) {
+    return isArray(array) &amp;&amp; array.some((element) =&gt; isSymbol(element));
 }
 &nbsp;
-export function hasOnceNull(array) {
+export function hasOnceSymbol(array) {
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
         <span class="missing-if-branch" title="if path not taken" >I</span>if (acc === 2) <span class="cstat-no" title="statement not covered" >return 2;</span>
-        if (isNull(element)) acc += 1;
+        if (isSymbol(element)) acc += 1;
         return acc;
     }, 0) === 1);
 }
 &nbsp;
-export function hasOnlyNull(array) {
-    return isArray(array) &amp;&amp; array.every((element) =&gt; isNull(element));
+export function hasOnlySymbol(array) {
+    return isArray(array) &amp;&amp; array.every((element) =&gt; isSymbol(element));
 }
 &nbsp;
-export function hasPairNull(array) {
+export function hasPairSymbol(array) {
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
-        if (isNull(element)) acc += 1;
+        if (isSymbol(element)) acc += 1;
         return acc;
     }, 0) === 2);
 }
 &nbsp;
-export function hasExactNull(array, nullCount) {
+export function hasExactSymbol(array, nullCount) {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) &amp;&amp; (array.reduce((acc, element) =&gt; {
-        if (isNull(element)) acc += 1;
+        if (isSymbol(element)) acc += 1;
         return acc;
     }, 0) === nullCount);
 }</pre></td></tr></table></pre>
