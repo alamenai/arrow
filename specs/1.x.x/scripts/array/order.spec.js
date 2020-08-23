@@ -103,7 +103,7 @@ describe("Order an array", () => {
 
             orderDesc(array); // The name key does not exist in the array
         }
-        expect(hasDifferentTypes).toThrowError("The elements has different types");
+        expect(hasDifferentTypes).toThrowError("The elements have different types");
     });
 
 });
