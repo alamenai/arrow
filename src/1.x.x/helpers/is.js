@@ -12,7 +12,7 @@ export const isStringArray = array => {
     return array.every(element => typeof element === "string")
 }
 
-export const isBooleanArray = (array) => {
+export const isBooleanArray = array => {
     return array.every(element => typeof element === "boolean")
 }
 export const isObjectArray = array => {
@@ -24,5 +24,5 @@ export const isPrimitiveArray = array => {
         array.every(element => typeof element === "number") ||
         array.every(element => typeof element === "string"))
         return true
-    throw new Error("The elements has different types")
+    throw new Error("The elements have different types")
 }
