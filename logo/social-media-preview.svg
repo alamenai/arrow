@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="400" width="600">
+  <g opacity="1">
+    <g opacity="1">
+      <path fill="rgb(0,0,0)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M10 0L590 0C595.51915024494 0 600 4.48084975506 600 10L600 390C600 395.51915024494 595.51915024494 400 590 400L10 400C4.480849755060001 400 1.7763568394002505e-15 395.51915024494 0 390L0 10C0 4.480849755060001 4.480849755059998 1.7763568394002505e-15 9.999999999999998 0Z"/>
+    </g>
+    <g transform="translate(300, 200) rotate(-90.00003218077504) translate(-300, -200)" opacity="1">
+      <g transform="translate(299, 200) rotate(90.00003218077504) translate(-299, -200)" opacity="1">
+        <path fill="rgb(250,153,23)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M293 120L293 120L339 280L259 280L293 120Z"/>
+      </g>
+      <g transform="translate(341, 200) rotate(90.00003218077504) translate(-341, -200)" opacity="1">
+        <path fill="rgb(250,153,23)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M333.5 100L333.5 100L391 300L291 300L333.5 100Z"/>
+      </g>
+      <g transform="translate(229, 200) rotate(90.00003218077504) translate(-229, -200)" opacity="1">
+        <path fill="rgb(250,153,23)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M226 130L226 130L249 270L209 270L226 130Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
