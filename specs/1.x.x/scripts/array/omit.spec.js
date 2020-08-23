@@ -25,6 +25,7 @@ describe("Remove multiple elements from an array ", () => {
     it("should return array without removed elements", () => {
         expect(omitMany([1, 2, 3, 4, 5, 6], 1, 2, 3)).toStrictEqual([4, 5, 6]);
         expect(omitMany(["aaa", "baa", "cbb", "dee", "ecc", "faa"], "aaa", "baa")).toStrictEqual(["cbb", "dee", "ecc", "faa"]);
+        expect(omitMany(["AaA", "bAa", "cbb", "dee", "ecc", "faa"], "aaa", "baa")).toStrictEqual(["cbb", "dee", "ecc", "faa"]);
         expect(omitMany([{ a: 1 }, { b: 2 }, { c: 3 }], 'a', 'b')).toStrictEqual([{ c: 3 }]);
     });
 });
