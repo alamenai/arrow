@@ -1,13 +1,7 @@
-import {
-    isArray
-} from "../../helpers/is"
+import { isArray } from "../../helpers/is"
+import { isPrimitiveArray } from "../../helpers/is"
 
-import {
-    isPrimitiveArray
-} from "../../helpers/is"
-
-export function orderRangeDesc(array, from, to) {
-
+export const orderRangeDesc = (array, from, to) => {
     if (isArray(array)) {
         if (to < array.length) {
             if (isPrimitiveArray(array)) {
@@ -26,7 +20,7 @@ export function orderRangeDesc(array, from, to) {
     }
 }
 
-export function orderDesc(array) {
+export const orderDesc = array => {
     if (isArray(array)) {
         if (isPrimitiveArray(array)) {
             return array.sort((a, b) => -1)
