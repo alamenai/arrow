@@ -1,11 +1,5 @@
-import {
-    isArray,
-    isObjectArray
-} from "../../helpers/is"
-
-import {
-    hasElement
-} from "../../helpers/has"
+import { hasElement } from "../../helpers/has"
+import { isArray, isObjectArray } from "../../helpers/is"
 
 export function omit(array, element) {
     if (isArray(array)) {
@@ -29,7 +23,6 @@ export function omitArray(array, omittedArray) {
 }
 
 export function omitMany(array, ...elements) {
-
     if (isArray(array)) {
         for (let element of elements) {
             if (!hasElement(array, element)) {
@@ -41,10 +34,21 @@ export function omitMany(array, ...elements) {
     }
 }
 
-function filterByValue(array, value) {
-    return array.filter(element => element !== value)
+const filterByValue = (array, value) => {
+    return array.filter(element => {
+        if (typeof element === "string") {
+            return element.toLowerCase().trim() !== value.toLowerCase().trim()
+        }
+        return element !== value
+    })
 }
 
-function filterByObject(array, key) {
-    return array.filter(element => Object.keys(element)[0] !== key)
+const filterByObject = (array, key) => {
+    return array.filter(element => {
+        const value = Object.keys(element)[0];
+        if (typeof value === "string") {
+            return value.toLowerCase().trim() !== key.toLowerCase().trim()
+        }
+        return value !== key
+    })
 }
