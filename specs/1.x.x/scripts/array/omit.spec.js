@@ -5,7 +5,7 @@ import {
 } from "../../../../src/1.x.x/scripts/array/omit"
 
 describe("Remove an element from an array ", () => {
-    it("should return array without removed element", () => {
+    it("should return an array without the removed element", () => {
         expect(omit([1, 2, 3, 4, 5, 6], 1)).toStrictEqual([2, 3, 4, 5, 6]);
         expect(omit(["aaa", "baa", "cbb", "dee", "ecc", "faa"], "aaa")).toStrictEqual(["baa", "cbb", "dee", "ecc", "faa"]);
         expect(omit(["AAA", "baa", "cbb", "dee", "ecc", "faa"], "aaa")).toStrictEqual(["baa", "cbb", "dee", "ecc", "faa"]);
@@ -22,7 +22,7 @@ describe("Remove an element from an array ", () => {
 });
 
 describe("Remove multiple elements from an array ", () => {
-    it("should return array without removed elements", () => {
+    it("should return an array without the removed elements", () => {
         expect(omitMany([1, 2, 3, 4, 5, 6], 1, 2, 3)).toStrictEqual([4, 5, 6]);
         expect(omitMany(["aaa", "baa", "cbb", "dee", "ecc", "faa"], "aaa", "baa")).toStrictEqual(["cbb", "dee", "ecc", "faa"]);
         expect(omitMany(["AaA", "bAa", "cbb", "dee", "ecc", "faa"], "aaa", "baa")).toStrictEqual(["cbb", "dee", "ecc", "faa"]);
@@ -31,7 +31,7 @@ describe("Remove multiple elements from an array ", () => {
 });
 
 describe("Remove elements from an array based on other array ", () => {
-    it("should return array without removed elements", () => {
+    it("should return an array without the removed elements", () => {
         expect(omitArray([1, 2, 3, 4, 5, 6], [1, 2, 3])).toStrictEqual([4, 5, 6]);
     });
 });
