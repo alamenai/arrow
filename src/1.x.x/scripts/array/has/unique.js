@@ -1,7 +1,5 @@
-import {
-    isArray,
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
-export function uniqueAll(array) {
+export const uniqueAll = array => {
     return isArray(array) && (new Set(array).size === array.length)
 }

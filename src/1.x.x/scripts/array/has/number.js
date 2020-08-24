@@ -1,16 +1,14 @@
-import {
-    isArray,
-} from "../../../helpers/is";
+import { isArray, } from "../../../helpers/is";
 
-export function hasAnyNumber(array) {
+export const hasAnyNumber = array => {
     return isArray(array) && array.every((element) => typeof element !== "number");
 }
 
-export function hasAtLeastNumber(array) {
+export const hasAtLeastNumber = array => {
     return isArray(array) && array.some((element) => typeof element === "number");
 }
 
-export function hasOnceNumber(array) {
+export const hasOnceNumber = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (typeof element === "number") acc += 1;
@@ -18,18 +16,18 @@ export function hasOnceNumber(array) {
     }, 0) === 1);
 }
 
-export function hasOnlyNumber(array) {
+export const hasOnlyNumber = array => {
     return isArray(array) && array.every((element) => typeof element === "number");
 }
 
-export function hasPairNumber(array) {
+export const hasPairNumber = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (typeof element === "number") acc += 1;
         return acc;
     }, 0) === 2);
 }
 
-export function hasExactNumber(array, numberCount) {
+export const hasExactNumber = (array, numberCount) => {
     if (typeof numberCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) && (array.reduce((acc, element) => {
         if (typeof element === "number") acc += 1;

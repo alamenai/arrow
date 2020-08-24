@@ -1,16 +1,14 @@
-import {
-    isArray,
-} from "../../../helpers/is";
+import { isArray, } from "../../../helpers/is";
 
-export function hasAnyInfinity(array) {
+export const hasAnyInfinity = array => {
     return isArray(array) && array.every((element) => element !== Infinity);
 }
 
-export function hasAtLeastInfinity(array) {
+export const hasAtLeastInfinity = array => {
     return isArray(array) && array.some((element) => element === Infinity);
 }
 
-export function hasOnceInfinity(array) {
+export const hasOnceInfinity = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (element === Infinity) acc += 1;
@@ -18,18 +16,18 @@ export function hasOnceInfinity(array) {
     }, 0) === 1);
 }
 
-export function hasOnlyInfinity(array) {
+export const hasOnlyInfinity = array => {
     return isArray(array) && array.every((element) => element === Infinity);
 }
 
-export function hasPairInfinity(array) {
+export const hasPairInfinity = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (element === Infinity) acc += 1;
         return acc;
     }, 0) === 2);
 }
 
-export function hasExactInfinity(array, nullCount) {
+export const hasExactInfinity = (array, nullCount) => {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) && (array.reduce((acc, element) => {
         if (element === Infinity) acc += 1;

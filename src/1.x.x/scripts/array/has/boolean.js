@@ -1,16 +1,14 @@
-import {
-    isArray,
-} from "../../../helpers/is";
+import { isArray, } from "../../../helpers/is";
 
-export function hasAnyBoolean(array) {
+export const hasAnyBoolean = (array) => {
     return isArray(array) && (!array.includes(true) && !array.includes(false));
 }
 
-export function hasAtLeastBoolean(array) {
+export const hasAtLeastBoolean = (array) => {
     return isArray(array) && (array.includes(true) || array.includes(false));
 }
 
-export function hasOnceBoolean(array) {
+export const hasOnceBoolean = (array) => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (typeof element === "boolean") acc += 1;
@@ -18,18 +16,18 @@ export function hasOnceBoolean(array) {
     }, 0) === 1);
 }
 
-export function hasOnlyBoolean(array) {
+export const hasOnlyBoolean = (array) => {
     return isArray(array) && array.every((element) => typeof element === "boolean");
 }
 
-export function hasPairBoolean(array) {
+export const hasPairBoolean = (array) => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (typeof element === "boolean") acc += 1;
         return acc;
     }, 0) === 2);
 }
 
-export function hasExactBoolean(array, nullCount) {
+export const hasExactBoolean = (array, nullCount) => {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) && (array.reduce((acc, element) => {
         if (typeof element === "boolean") acc += 1;

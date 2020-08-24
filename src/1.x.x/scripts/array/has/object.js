@@ -1,20 +1,18 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
 function isObject(element) {
     return typeof element === "object" && !Array.isArray(element)
 }
 
-export function hasAnyObject(array) {
+export const hasAnyObject = array => {
     return isArray(array) && !array.every(element => isObject(element))
 }
 
-export function hasAtLeastObject(array) {
+export const hasAtLeastObject = array => {
     return isArray(array) && array.some(element => isObject(element))
 }
 
-export function hasOnceObject(array) {
+export const hasOnceObject = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (acc === 2) return 2;
         if (isObject(element)) acc += 1;
@@ -22,18 +20,18 @@ export function hasOnceObject(array) {
     }, 0) === 1);
 }
 
-export function hasOnlyObject(array) {
+export const hasOnlyObject = array => {
     return isArray(array) && array.every((element) => isObject(element));
 }
 
-export function hasPairObject(array) {
+export const hasPairObject = array => {
     return isArray(array) && (array.reduce((acc, element) => {
         if (isObject(element)) acc += 1;
         return acc;
     }, 0) === 2);
 }
 
-export function hasExactObject(array, nullCount) {
+export const hasExactObject = (array, nullCount) => {
     if (typeof nullCount !== "number") throw new Error("The second parameter should be a number");
     return isArray(array) && (array.reduce((acc, element) => {
         if (isObject(element)) acc += 1;
