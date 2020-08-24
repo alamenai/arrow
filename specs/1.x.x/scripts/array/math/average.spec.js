@@ -35,7 +35,7 @@ describe("Calculate the average of an array", () => {
             const arr = [undefined, undefined, undefined]
             average(arr)
         }
-        expect(hasStringType).toThrowError("The elements of an array should have a String type");
+        expect(hasStringType).toThrowError("The elements of an array should have a Number type");
         expect(hasUndefined).toThrowError("The elements of an array should have a Number type");
     });
 
