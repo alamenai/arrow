@@ -1,8 +1,6 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
-export function cosRange(array, from, to) {
+export const cosRange = (array, from, to) => {
     if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = Math.cos(element))) || element)
@@ -12,7 +10,7 @@ export function cosRange(array, from, to) {
     }
 }
 
-export function cos(array) {
+export const cos = array => {
     if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = Math.cos(element))) || element)
     }

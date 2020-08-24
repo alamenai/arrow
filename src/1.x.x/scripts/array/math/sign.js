@@ -1,8 +1,6 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
-export function signRange(array, from, to) {
+export const signRange = (array, from, to) => {
     if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element > 0 && (element = "+") || element < 0 && (element = "-"))) || element)
@@ -12,7 +10,7 @@ export function signRange(array, from, to) {
     }
 }
 
-export function sign(array) {
+export const sign = (array) => {
     if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element > 0 && (element = "+") || element < 0 && (element = "-"))) || element)
     }

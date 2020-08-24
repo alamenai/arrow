@@ -1,12 +1,6 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray, isNumberArray } from "../../../helpers/is";
 
-import {
-    isNumberArray
-} from "../../../helpers/is";
-
-export function multiplyRange(array, from, to, multiplier) {
+export const multiplyRange = (array, from, to, multiplier) => {
     if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = element * multiplier)) || element)
@@ -15,13 +9,13 @@ export function multiplyRange(array, from, to, multiplier) {
         }
     }
 }
-export function multiplySelf(array) {
+export const multiplySelf = array => {
     if (isArray(array)) {
         return isNumberArray(array) ? array.reduce((previous, next) => previous * next) : array
     }
 }
 
-export function multiply(array, multiplier) {
+export const multiply = (array, multiplier) => {
     if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = element * multiplier)) || element)
     }

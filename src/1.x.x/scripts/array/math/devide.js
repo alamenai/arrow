@@ -1,8 +1,6 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
-export function devideRange(array, from, to, devider) {
+export const devideRange = (array, from, to, devider) => {
     if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = element / devider)) || element)
@@ -12,13 +10,13 @@ export function devideRange(array, from, to, devider) {
     }
 }
 
-export function devideSelf(array) {
+export const devideSelf = array => {
     if (isArray(array)) {
         return array.reduce((previous, next) => previous / next)
     }
 }
 
-export function devide(array, devider) {
+export const devide = (array, devider) => {
     if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = element / devider)) || element)
     }

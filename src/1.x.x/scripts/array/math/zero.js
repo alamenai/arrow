@@ -1,8 +1,6 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
 
-export function zeroRange(array, from, to) {
+export const zeroRange = (array, from, to) => {
     if (isArray(array)) {
         if (to < array.length) {
             return array.map(element => ((array.indexOf(element) >= from && array.indexOf(element) < to + 1) && typeof element === "number" && (element = 0)) || element)
@@ -12,7 +10,7 @@ export function zeroRange(array, from, to) {
     }
 }
 
-export function zero(array) {
+export const zero = array => {
     if (isArray(array)) {
         return array.map(element => (typeof element === "number" && (element = 0)) || element)
     }
