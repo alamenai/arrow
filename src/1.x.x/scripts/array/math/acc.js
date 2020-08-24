@@ -1,18 +1,13 @@
-import {
-    isArray
-} from "../../../helpers/is";
+import { isArray } from "../../../helpers/is";
+import { isBooleanArray } from "../../../helpers/is";
 
-import {
-    isBooleanArray
-} from "../../../helpers/is";
-
-export function accBoolean(array) {
+export const accBoolean = array => {
     if (isArray(array)) {
         return isBooleanArray(array) ? array.reduce((previous, next) => previous && next) : array
     }
 }
 
-export function accAll(array) {
+export const accAll = array => {
     if (isArray(array)) {
         return array.reduce((previous, next) => previous + next)
     }
