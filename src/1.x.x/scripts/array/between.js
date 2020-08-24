@@ -1,8 +1,6 @@
-import {
-    isArray,
-} from "../../helpers/is";
+import { isArray, } from "../../helpers/is";
 
-export function betweenRange(array, from, to, start, end) {
+export const betweenRange = (array, from, to, start, end) => {
     if (isArray(array)) {
         if (to < array.length) {
             const range = array.slice(from, to + 1)
@@ -13,7 +11,8 @@ export function betweenRange(array, from, to, start, end) {
     }
     return array.every(element => element > start - 1 && element < end + 1)
 }
-export function between(array, start, end) {
+
+export const between = (array, start, end) => {
     if (isArray(array))
         return array.every(element => element > start - 1 && element < end + 1)
 }

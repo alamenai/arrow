@@ -1,8 +1,6 @@
-import {
-    isArray
-} from "../../helpers/is"
+import { isArray } from "../../helpers/is"
 
-export function switchByIndex(array, switchedIndex, switcherIndex) {
+export const switchByIndex = (array, switchedIndex, switcherIndex) => {
     if (isArray(array)) {
         if (!(switchedIndex < array.length && switcherIndex < array.length)) {
             throw new Error("One or both of the indexes are big then the length of the array")
@@ -13,7 +11,7 @@ export function switchByIndex(array, switchedIndex, switcherIndex) {
         return array;
     }
 }
-export function switchByValue(array, switchedValue, switcherValue) {
+export const switchByValue = (array, switchedValue, switcherValue) => {
     if (isArray(array)) {
         const index = array.indexOf(switchedValue);
         const switcherIndex = array.indexOf(switcherValue);

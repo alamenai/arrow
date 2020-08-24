@@ -1,7 +1,7 @@
 import { hasElement } from "../../helpers/has"
 import { isArray, isObjectArray } from "../../helpers/is"
 
-export function omit(array, element) {
+export const omit = (array, element) => {
     if (isArray(array)) {
         if (!hasElement(array, element)) {
             throw new Error(element + " does not exist")
@@ -10,7 +10,7 @@ export function omit(array, element) {
     }
 }
 
-export function omitArray(array, omittedArray) {
+export const omitArray = (array, omittedArray) => {
     if (isArray(array) && isArray(omittedArray)) {
         for (let element of omittedArray) {
             if (!hasElement(array, element)) {
@@ -22,7 +22,7 @@ export function omitArray(array, omittedArray) {
     }
 }
 
-export function omitMany(array, ...elements) {
+export const omitMany = (array, ...elements) => {
     if (isArray(array)) {
         for (let element of elements) {
             if (!hasElement(array, element)) {

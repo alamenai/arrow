@@ -1,30 +1,30 @@
-export function howManyNull(array) {
+export const howManyNull = array => {
     return array.filter(element => element === null).length
 }
-export function howManyInfinity(array) {
+export const howManyInfinity = array => {
     return array.filter(element => element === Infinity).length
 }
-export function howManyBoolean(array) {
+export const howManyBoolean = array => {
     return array.filter(element => typeof element === "boolean").length
 }
-export function howManyNumber(array) {
+export const howManyNumber = array => {
     return array.filter(element => typeof element === "number").length
 }
-export default function howManySymbol(array) {
+export const howManySymbol = array => {
     return array.filter(element => typeof element === "symbol").length
 }
-export function howManyString(array) {
+export const howManyString = array => {
     return array.filter(element => typeof element === "string").length
 }
-export function howManyObject(array) {
+export const howManyObject = array => {
     return array.filter(element => typeof element === "object" && element !== null && element !== undefined).length
 }
-export function howManyArray(array) {
+export const howManyArray = array => {
     return array.filter(element => Array.isArray(element)).length
 }
-export function howManyOdd(array) {
+export const howManyOdd = array => {
     return array.filter(element => typeof element === "number" && element % 2 === 1).length
 }
-export function howManyPair(array) {
+export const howManyPair = array => {
     return array.filter(element => typeof element === "number" && element % 2 === 0).length
 }

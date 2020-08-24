@@ -1,5 +1,6 @@
 import { isArray } from "../../helpers/is";
-export function same(...arrays) {
+
+export const same = (...arrays) => {
     if (arrays.length === 1) return arrays[0]
     const args = Array.from([...arrays])
     let initArray = args[0];
