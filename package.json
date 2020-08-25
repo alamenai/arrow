@@ -4,7 +4,12 @@
     "description": "A tiny Javascript library for solving complex problems that are related to arrays",
     "main": "index.js",
     "scripts": {
-        "test": "jest --config=jest.config.js --detectOpenHandles --watch",
+        "lint": "eslint ./**",
+        "lint:fix": "eslint ./** --fix",
+        "lint:src": "eslint ./src",
+        "lint:src:fix": "eslint ./src --fix",
+        "lint:fix-cache": "eslint ./** --fix --cache",
+        "test": "jest ./specs/1.x.x/scripts/array --config=jest.config.js --detectOpenHandles --watchAll",
         "test:spec": "jest ./specs/1.x.x/scripts/array/order.spec.js --config=jest.config.js --detectOpenHandles --watch",
         "push": "git push",
         "build": "webpack --colors",
