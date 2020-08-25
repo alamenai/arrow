@@ -2,9 +2,10 @@
 <img src="logo/logo-128.svg"/>
 <h2 align="center">Arrow</h2>
 </p> 
-<h4 align="center">A modern JavaScript utility library for Arrays</h4>
+<h4 align="center">A modern JavaScript utility library for complex data structures</h4>
 
 ### Quick Example
+
 ```Javascript
 import {omit} from "arrow"
 
@@ -13,4 +14,4 @@ const withoutAngular = omit(frameworks,"angular");
 
 console.log(withoutAngular); // ["react", "vue", "ember"]
 ```
-<a href="examples">Show more →</a>
+<a href="examples/README.md">Show more →</a>
