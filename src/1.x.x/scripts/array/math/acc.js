@@ -12,5 +12,3 @@ export const accAll = array => {
         return array.reduce((previous, next) => previous + next)
     }
 }
-
-export default Accumulator
