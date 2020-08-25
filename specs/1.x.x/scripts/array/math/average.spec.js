@@ -1,9 +1,4 @@
-/**
- * Make sure to open an issue if you find a bug ( Not grammar error ) in this test
- * Make sure to open an issue before you create pull request for additional test
-*/
-
-import average from "../../../../../src/1.x.x/scripts/array/math/average"
+import { average } from "../../../../../src/1.x.x/scripts/array/math/average"
 
 describe("Calculate the average of an array", () => {
     it("should return positive value for positive elements", () => {
