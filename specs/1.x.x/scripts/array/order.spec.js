@@ -46,7 +46,7 @@ describe("Order a range of an array", () => {
 
             orderRangeDesc(array, 0, 1); // The name key does not exist in the array
         }
-        expect(hasDifferentTypes).toThrowError("The elements has different types");
+        expect(hasDifferentTypes).toThrowError("The elements have different types");
     });
 
     it("should throw an error", () => {
