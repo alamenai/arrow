@@ -1,7 +1,7 @@
 {
     "name": "arrow",
     "version": "1.0.0",
-    "description": "A tiny Javascript library for solving complex problems that are related to arrays",
+    "description": "A modern JavaScript utility library for complex data structures",
     "main": "index.js",
     "scripts": {
         "lint": "eslint ./**",
