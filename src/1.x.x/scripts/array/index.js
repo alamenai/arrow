@@ -1,11 +1,8 @@
 import { difference } from "./difference"
 import { between, betweenRange } from "./between"
-import {
-    convertRangeToLowerCase,
-    convertRangeToUpperCase,
-    convertToLowerCase,
-    convertToUpperCase
-} from "./convert"
+import { toLowerCase } from "./lowercase"
+import { toUpperCase } from "./uppercase"
+import { merge } from "./merge"
 
 import {
     extractArray,
@@ -43,10 +40,9 @@ export {
     difference,
     between,
     betweenRange,
-    convertRangeToLowerCase,
-    convertRangeToUpperCase,
-    convertToLowerCase,
-    convertToUpperCase,
+    toLowerCase,
+    toUpperCase,
+    merge,
     extractArray,
     extractByOddIndex,
     extractByPaiIndex,
