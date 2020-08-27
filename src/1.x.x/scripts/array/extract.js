@@ -1,19 +1,61 @@
-export function extractNull(array) {}
+import { isArray } from "../../helpers/is";
 
-export function extractSymbol(array) {}
+export const extractNull = array => {
+    if (isArray(array)) {
+        return array.filter(value => value === null)
+    }
+}
 
-export function extractString(array) {}
+export const extractSymbol = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "symbol")
+    }
+}
 
-export function extractNumber(array) {}
+export const extractString = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "string")
+    }
+}
 
-export function extractObject(array) {}
+export const extractNumber = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "number")
+    }
+}
 
-export function extractArray(array) {}
+export const extractObject = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "object" && !Array.isArray(value) && value !== null)
+    }
+}
 
-export function extractOdd(array) {}
+export const extractArray = array => {
+    if (isArray(array)) {
+        return array.filter(value => Array.isArray(value))
+    }
+}
 
-export function extractPair(array) {}
+export const extractOdd = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "number" && value % 2 !== 0)
+    }
+}
 
-export function extractByOddIndex(array) {}
+export const extractPair = array => {
+    if (isArray(array)) {
+        return array.filter(value => typeof value === "number" && value % 2 === 0)
+    }
+}
 
-export function extractByPaiIndex(array) {}
+export const extractByOddIndex = array => {
+    if (isArray(array)) {
+        return array.filter((_value, index) => index % 2 !== 0)
+    }
+}
+
+export const extractByPaiIndex = array => {
+    if (isArray(array)) {
+        return array.filter((_value, index) => index % 2 === 0)
+    }
+}
