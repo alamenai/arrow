@@ -16,6 +16,8 @@ module.exports = {
     output: {
         filename: "[name]-alpha.js",
         path: path.resolve(__dirname, 'build'),
+        library: 'arrow',
+        libraryTarget: 'umd'
     },
     optimization: {
         splitChunks: {
