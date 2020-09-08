@@ -12,8 +12,9 @@
         "test": "jest ./specs/1.x.x/scripts/array --config=jest.config.js --detectOpenHandles --watchAll",
         "test:spec": "jest ./specs/1.x.x/scripts/array/order.spec.js --config=jest.config.js --detectOpenHandles --watch",
         "push": "git push",
+        "babel": "babel --presets es2015 ./src/index.js -o build/arrow-alpha.js",
         "build": "webpack --colors",
-        "build:watch": "webpack --watch"
+        "build:watch": "webpack -d --watch"
     },
     "repository": {
         "type": "git",
@@ -32,6 +33,7 @@
     "homepage": "https://github.com/MenaiAla/arrow#readme",
     "devDependencies": {
         "@babel/core": "^7.10.5",
+        "@babel/plugin-transform-modules-commonjs": "^7.10.4",
         "@babel/preset-env": "^7.10.4",
         "babel-jest": "^26.1.0",
         "eslint": "^7.7.0",
@@ -41,6 +43,7 @@
         "webpack-cli": "^3.3.12"
     },
     "dependencies": {
+        "babel-loader": "^8.1.0",
         "clean-webpack-plugin": "^3.0.0",
         "webpack": "^4.44.1"
     }
